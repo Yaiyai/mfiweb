@@ -1,0 +1,103 @@
+@import './main';
+* {
+	margin: 0;
+	scroll-behavior: smooth;
+	padding: 0;
+	outline: none;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: $font-text;
+	color: map-get($theme-colors, 'third');
+	&.no-scroll {
+		overflow: hidden;
+	}
+}
+main {
+	background-image: url('https://res.cloudinary.com/mfi-app/image/upload/v1677411184/web/World_map_with_points_is1jua.svg');
+	background-position: top center;
+	background-size: 100%;
+	background-repeat: repeat-y;
+	position: relative;
+	z-index: 0;
+	&::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(255, 255, 255, 0.5);
+		z-index: -1;
+	}
+}
+button {
+	outline: none;
+	background: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	li {
+		list-style-type: none;
+		a {
+			display: block;
+			text-decoration: none;
+		}
+		svg {
+			color: map-get($theme-colors, 'primary');
+			border-radius: 15px;
+			margin-right: calc(#{$module} / 6);
+		}
+	}
+}
+p {
+	margin: 0;
+}
+small {
+	@include font-line-height($font-xs);
+	font-weight: $text-light;
+}
+a {
+	display: block;
+}
+svg {
+	width: 10px;
+	height: 10px;
+}
+.bratic-container {
+	max-width: 1400px;
+	padding-left: 0;
+	padding-right: 0;
+	margin: 0 auto;
+	@include breakpoint(xl) {
+		max-width: 1140px;
+	}
+	@include breakpoint(lg) {
+		max-width: 960px;
+	}
+	@include breakpoint(md) {
+		max-width: 700px;
+	}
+	@include breakpoint(sm-down) {
+		padding-left: 15px;
+		padding-right: 15px;
+		max-width: 540px;
+	}
+}
+.left,
+.right {
+	box-sizing: border-box;
+	width: calc((100% / 12) * 6);
+	@include breakpoint(sm-down) {
+		width: calc((100% / 12) * 12);
+	}
+}
