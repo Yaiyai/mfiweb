@@ -13,34 +13,26 @@ const Footer = ({ company }) => {
 	return (
 		<footer>
 			<article className='top'>
-				<div className='bratic-container'>
+				<div className='mfi-container'>
 					<div className='up'>
 						<h2>
-							En <span className='orange'>bratic</span> queremos ser tu <span className='orange'>partner digital</span>
+							En <span className='orange'>mfi</span> queremos ser tu <span className='orange'>partner digital</span>
 						</h2>
-						<Link href='/#contacto'>
-							<a className='my-btn'>¡Hablemos!</a>
-						</Link>
+						<Link href='/#contacto'>¡Hablemos!</Link>
 					</div>
 					<nav className='down'>
 						<div className='left'>
 							<Link href='/'>
-								<a>
-									<figure className='logo'>
-										<img src={company?.companyFetched?.secondaryLogo} alt='bratic Logo' />
-									</figure>
-								</a>
+								<figure className='logo'>
+									<img src={company?.companyFetched?.secondaryLogo} alt='mfi Logo' />
+								</figure>
 							</Link>
 							<ul className='footer-links'>
 								<li>
-									<Link href='/#quienes-somos'>
-										<a>Quiénes Somos</a>
-									</Link>
+									<Link href='/#quienes-somos'>Quiénes Somos</Link>
 								</li>
 								<li>
-									<Link href='/servicios'>
-										<a>Servicios</a>
-									</Link>
+									<Link href='/servicios'>Servicios</Link>
 								</li>
 							</ul>
 						</div>
@@ -56,18 +48,14 @@ const Footer = ({ company }) => {
 				</div>
 			</article>
 			<article className='bottom'>
-				<div className='bratic-container'>
+				<div className='mfi-container'>
 					<ul>
 						<li>
-							<Link href='/politica-privacidad'>
-								<a>Política de Privacidad</a>
-							</Link>
+							<Link href='/politica-privacidad'>Política de Privacidad</Link>
 						</li>
 						<span>·</span>
 						<li>
-							<Link href='/aviso-legal'>
-								<a>Aviso Legal</a>
-							</Link>
+							<Link href='/aviso-legal'>Aviso Legal</Link>
 						</li>
 					</ul>
 					<small>&copy; {company?.companyFetched?.name}</small>

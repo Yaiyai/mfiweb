@@ -39,7 +39,8 @@
 			align-items: center;
 			li {
 				padding: calc(#{$module} / 2);
-				a {
+				a,
+				p {
 					@include font-line-height($font-xl);
 					text-transform: uppercase;
 					font-family: $font-titles;

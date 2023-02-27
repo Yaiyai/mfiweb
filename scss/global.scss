@@ -16,10 +16,6 @@ body {
 	}
 }
 main {
-	background-image: url('https://res.cloudinary.com/mfi-app/image/upload/v1677411184/web/World_map_with_points_is1jua.svg');
-	background-position: top center;
-	background-size: 100%;
-	background-repeat: repeat-y;
 	position: relative;
 	z-index: 0;
 	&::before {
@@ -27,10 +23,15 @@ main {
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		background-color: rgba(255, 255, 255, 0.5);
+		background-image: url('https://res.cloudinary.com/mfi-app/image/upload/v1677411184/web/World_map_with_points_is1jua.svg');
+		background-position: top center;
+		background-size: 150%;
+		background-repeat: no-repeat;
+		opacity: 0.1;
 		z-index: -1;
 	}
 }
+
 button {
 	outline: none;
 	background: none;
@@ -73,7 +74,7 @@ svg {
 	width: 10px;
 	height: 10px;
 }
-.bratic-container {
+.mfi-container {
 	max-width: 1400px;
 	padding-left: 0;
 	padding-right: 0;

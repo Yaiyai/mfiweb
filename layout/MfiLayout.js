@@ -19,7 +19,7 @@ const MfiLayout = (props) => {
 
 				<meta name='keywords' content='' />
 			</Head>
-			{/* <NavBar company={companyFetched} /> */}
+			<NavBar company={companyFetched} />
 			<main>{children}</main>
 			{/* <Footer company={companyFetched} /> */}
 		</>
