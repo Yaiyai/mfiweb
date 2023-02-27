@@ -1,3 +1,23 @@
 @import './modules.scss';
-@import './colors';
 @import './fonts';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,900&display=swap');
+
+:root {
+	--module: 24px;
+	--primary: #050652;
+	--secondary: #055251;
+	--third: #7a9cd0;
+	--grey: #c5c6c6;
+	--light-grey: #d9ddde;
+	--text: #1c1c1c;
+	--bkg: #fafafc;
+	--font-text: 'Roboto', sans-serif;
+	--font-titles: 'Roboto Slab', sans-serif;
+	--fontawesome: 'FontAwesome';
+	--sm: 540px;
+	--md: 700px;
+	--lg: 960px;
+	--xl: 1140px;
+	--xxl: 1400px;
+}

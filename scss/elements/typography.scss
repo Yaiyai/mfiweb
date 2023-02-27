@@ -1,8 +1,8 @@
 .orange {
-	color: map-get($theme-colors, 'secondary');
+	color: var(--secondary);
 }
 .red {
-	color: map-get($theme-colors, 'primary');
+	color: var(--primary);
 }
 h1,
 h2,
@@ -10,7 +10,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: $font-titles;
+	font-family: var(--font-titles);
 }
 
 h1 {
@@ -29,10 +29,10 @@ h1 {
 	}
 }
 h2 {
-	color: map-get($theme-colors, 'text');
+	color: var(--text);
 	font-weight: $titles-bold;
 	@include font-line-height($h2-size);
-	margin-bottom: calc(#{$module} * 2);
+	margin-bottom: calc(var(--module) * 2);
 
 	@include breakpoint(xl) {
 		@include font-line-height(42px);
@@ -78,7 +78,7 @@ li {
 }
 .subtitle {
 	text-transform: uppercase;
-	color: map-get($theme-colors, 'primary');
+	color: var(--primary);
 	@include font-line-height($font-lg);
 	font-weight: $text-semibold;
 	@include breakpoint(lg-down) {
@@ -99,7 +99,7 @@ li {
 	}
 	.ql-size-large {
 		text-transform: uppercase;
-		color: map-get($theme-colors, 'primary');
+		color: var(--primary);
 		@include font-line-height($font-lg);
 		font-weight: $text-semibold;
 	}
@@ -113,9 +113,9 @@ li {
 
 			&::before {
 				content: '\00bb';
-				margin-right: calc(#{$module} / 4);
+				margin-right: calc(var(--module) / 4);
 				font-weight: $text-semibold;
-				color: map-get($theme-colors, 'primary');
+				color: var(--primary);
 			}
 		}
 	}
@@ -125,7 +125,7 @@ li {
 			margin-left: 24px;
 			font-weight: $titles-light;
 			&::marker {
-				color: map-get($theme-colors, 'primary');
+				color: var(--primary);
 			}
 		}
 	}
@@ -136,13 +136,13 @@ li {
 	}
 	.ql-indent-1,
 	.ql-indent-2 {
-		margin-left: calc(#{$module} * 1);
+		margin-left: calc(var(--module) * 1);
 		@include font-line-height($font-sm);
 		&::before {
 			content: '\2234';
-			margin-right: calc(#{$module} / 4);
+			margin-right: calc(var(--module) / 4);
 			font-weight: $text-semibold;
-			color: map-get($theme-colors, 'primary');
+			color: var(--primary);
 		}
 	}
 }

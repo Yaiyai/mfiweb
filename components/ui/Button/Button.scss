@@ -7,65 +7,65 @@
 }
 
 .my-btn {
-	font-family: $font-titles;
+	font-family: var(--font-titles);
 	font-weight: $titles-semibold;
 	font-size: $font-sm;
-	background-color: map-get($theme-colors, 'primary');
+	background-color: var(--primary);
 	border: none;
 	color: white;
-	padding: 10px calc(#{$module} / 3);
+	padding: 10px calc(var(--module) / 3);
 	text-transform: uppercase;
 	text-decoration: none;
 	position: relative;
 
 	&:hover {
-		background-color: map-get($theme-colors, 'secondary');
+		background-color: var(--secondary);
 		color: white;
 		text-decoration: none;
 	}
 
 	&.secondary {
 		background-color: white;
-		color: map-get($theme-colors, 'primary');
-		border-bottom: 3px solid map-get($theme-colors, 'primary');
+		color: var(--primary);
+		border-bottom: 3px solid var(--primary);
 		padding-left: 0;
 		padding-right: 0;
 		&:hover {
-			color: map-get($theme-colors, 'secondary');
-			border-bottom: 3px solid map-get($theme-colors, 'secondary');
+			color: var(--secondary);
+			border-bottom: 3px solid var(--secondary);
 		}
 	}
 	&.third {
 		background-color: white;
-		color: map-get($theme-colors, 'secondary');
-		border: 1px solid map-get($theme-colors, 'secondary');
-		border-bottom: 3px solid map-get($theme-colors, 'secondary');
+		color: var(--secondary);
+		border: 1px solid var(--secondary);
+		border-bottom: 3px solid var(--secondary);
 
 		&:hover {
-			color: map-get($theme-colors, 'primary');
-			border: 1px solid map-get($theme-colors, 'primary');
-			border-bottom: 3px solid map-get($theme-colors, 'primary');
+			color: var(--primary);
+			border: 1px solid var(--primary);
+			border-bottom: 3px solid var(--primary);
 		}
 	}
 	&.mini {
 		font-size: 10px;
-		padding: calc(#{$module} / 6) calc(#{$module} / 4);
+		padding: calc(var(--module) / 6) calc(var(--module) / 4);
 	}
 }
 
 .my-btn-back {
-	color: map-get($theme-colors, 'primary');
+	color: var(--primary);
 	text-transform: uppercase;
 	font-size: $font-xs;
 }
 
 .my-btn-more {
-	color: map-get($theme-colors, 'secondary');
+	color: var(--secondary);
 	text-transform: uppercase;
 	font-size: $font-xs;
 	text-decoration: none;
 	@include font-line-height($font-xs);
 	&:hover {
-		color: map-get($theme-colors, 'primary');
+		color: var(--primary);
 	}
 }

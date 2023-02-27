@@ -1,12 +1,12 @@
 footer {
 	.top {
-		background-color: map-get($theme-colors, 'third');
+		background-color: var(--third);
 		.up {
-			padding: calc(#{$module} * 1.5) 0;
+			padding: calc(var(--module) * 1.5) 0;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			border-bottom: solid 1px map-get($theme-colors, 'secondary');
+			border-bottom: solid 1px var(--secondary);
 			@include breakpoint(sm-down) {
 				flex-direction: column;
 			}
@@ -15,7 +15,7 @@ footer {
 				margin: 0;
 				@include font-line-height(32px);
 				@include breakpoint(sm-down) {
-					margin-bottom: calc(#{$module} * 1);
+					margin-bottom: calc(var(--module) * 1);
 					@include font-line-height($font-xl);
 				}
 			}
@@ -26,7 +26,7 @@ footer {
 			}
 		}
 		.down {
-			padding: calc(#{$module} * 1) 0;
+			padding: calc(var(--module) * 1) 0;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -51,11 +51,11 @@ footer {
 				.footer-links {
 					display: flex;
 					align-items: center;
-					padding: 0 calc(#{$module} * 1);
+					padding: 0 calc(var(--module) * 1);
 					a {
-						font-family: $font-titles;
+						font-family: var(--font-titles);
 						color: white;
-						margin-right: calc(#{$module} / 2);
+						margin-right: calc(var(--module) / 2);
 						font-size: $font-xs;
 						font-weight: $titles-light;
 						opacity: 0.5;
@@ -71,7 +71,7 @@ footer {
 				justify-content: flex-end;
 				a {
 					color: white;
-					margin-left: calc(#{$module} / 4);
+					margin-left: calc(var(--module) / 4);
 					opacity: 0.5;
 					&:hover {
 						opacity: 1;
@@ -83,7 +83,7 @@ footer {
 	.bottom {
 		background-color: black;
 		color: white;
-		padding: calc(#{$module} * 0.5) 0;
+		padding: calc(var(--module) * 0.5) 0;
 		.mfi-container {
 			display: flex;
 			justify-content: space-between;

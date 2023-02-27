@@ -1,7 +1,7 @@
 .my-modals {
 	display: flex;
 	.modal-content {
-		padding: calc(#{$module} * 1);
+		padding: calc(var(--module) * 1);
 		width: 100%;
 	}
 	h2 {
@@ -12,7 +12,7 @@
 		}
 	}
 	p {
-		margin-bottom: calc(#{$module} / 2);
+		margin-bottom: calc(var(--module) / 2);
 	}
 	&.video {
 		.modal-dialog {
@@ -52,7 +52,7 @@
 	}
 }
 .modal-backdrop.show {
-	background-color: map-get($theme-colors, 'text');
+	background-color: var(--text);
 	backdrop-filter: blur(10px);
 }
 .close-btn {
@@ -62,17 +62,17 @@
 	align-items: center;
 	justify-content: flex-end;
 	outline: none;
-	margin-bottom: calc(#{$module} / 2);
+	margin-bottom: calc(var(--module) / 2);
 	color: white;
-	margin-top: calc(#{$module} / 2);
-	margin-right: calc(#{$module} / 2);
+	margin-top: calc(var(--module) / 2);
+	margin-right: calc(var(--module) / 2);
 	&:focus {
 		outline: none;
 	}
 	svg {
-		margin-left: calc(#{$module} * 0.5);
-		width: calc(#{$module} * 1) !important;
-		height: calc(#{$module} * 1);
+		margin-left: calc(var(--module) * 0.5);
+		width: calc(var(--module) * 1) !important;
+		height: calc(var(--module) * 1);
 		color: white;
 	}
 }

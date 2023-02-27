@@ -6,19 +6,19 @@
 	margin-left: -50vw;
 	margin-right: -50vw;
 	> * {
-		max-width: map-get($container-max-widths, 'xxl');
+		max-width: var(--xxl);
 
 		@include breakpoint(xl) {
-			max-width: map-get($container-max-widths, 'xl');
+			max-width: var(--xl);
 		}
 		@include breakpoint(lg-down) {
-			max-width: map-get($container-max-widths, 'lg');
+			max-width: var(--lg);
 		}
 		@include breakpoint(md-down) {
-			max-width: map-get($container-max-widths, 'md');
+			max-width: var(--md);
 		}
 		@include breakpoint(sm-down) {
-			max-width: map-get($container-max-widths, 'sm');
+			max-width: var(--sm);
 		}
 		@include breakpoint(xs-down) {
 			max-width: 100vw;

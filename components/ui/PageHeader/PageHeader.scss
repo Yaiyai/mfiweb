@@ -3,9 +3,9 @@
 	background-size: 100%;
 	background-position: center center;
 	background-repeat: no-repeat;
-	padding: calc(#{$module} * 8) 0 calc(#{$module} * 6);
+	padding: calc(var(--module) * 8) 0 calc(var(--module) * 6);
 	position: relative;
-	border-bottom: 5px solid map-get($theme-colors, 'primary');
+	border-bottom: 5px solid var(--primary);
 	filter: grayscale(0%);
 	@include breakpoint(sm-down) {
 		background-size: cover;

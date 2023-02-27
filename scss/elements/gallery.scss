@@ -6,20 +6,20 @@
 			overflow: hidden;
 			cursor: pointer;
 			@include breakpoint(xl-up) {
-				@include items-grid(6, $module);
+				@include items-grid(6, var(--module));
 				height: 170px;
 			}
 			@include breakpoint(lg) {
 				height: 150px;
-				@include items-grid(5, $module);
+				@include items-grid(5, var(--module));
 			}
 			@include breakpoint(md) {
 				height: 150px;
-				@include items-grid(4, $module);
+				@include items-grid(4, var(--module));
 			}
 			@include breakpoint(sm-down) {
 				height: 180px;
-				@include items-grid(2, $module);
+				@include items-grid(2, var(--module));
 			}
 
 			img {
