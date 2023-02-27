@@ -8,7 +8,7 @@
 			font-family: var(--font-titles);
 			color: var(--text);
 			margin-left: var(--module);
-			font-size: $font-sm;
+			font-size: var(--font-sm);
 			&.active {
 				color: var(--primary);
 			}
@@ -21,7 +21,7 @@
 		padding: calc(var(--module) * 1) calc(var(--module) * 1.5);
 		a {
 			font-family: var(--font-titles);
-			font-size: $font-sm;
+			font-size: var(--font-sm);
 			color: white;
 			&:first-child {
 				margin-right: calc(var(--module) * 1);

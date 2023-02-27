@@ -8,11 +8,11 @@ select,
 textarea {
 	border: var(--grey) 1px solid;
 	border-radius: 0;
-	@include font-line-height($font-xs);
+	@include font-line-height(var(--font-xs));
 	padding: calc(var(--module) / 3);
 	&::placeholder {
 		display: block;
-		@include font-line-height($font-xs);
+		@include font-line-height(var(--font-xs));
 		color: var(--grey);
 		padding: calc(var(--module) / 3);
 	}

@@ -16,7 +16,7 @@ footer {
 				@include font-line-height(32px);
 				@include breakpoint(sm-down) {
 					margin-bottom: calc(var(--module) * 1);
-					@include font-line-height($font-xl);
+					@include font-line-height(var(--font-xl));
 				}
 			}
 			.my-btn {
@@ -56,8 +56,8 @@ footer {
 						font-family: var(--font-titles);
 						color: white;
 						margin-right: calc(var(--module) / 2);
-						font-size: $font-xs;
-						font-weight: $titles-light;
+						font-size: var(--font-xs);
+						font-weight: var(--light);
 						opacity: 0.5;
 						&:hover {
 							opacity: 1;
@@ -99,8 +99,8 @@ footer {
 					list-style-type: none;
 					a {
 						color: white;
-						font-weight: $text-light;
-						@include font-line-height($font-xs);
+						font-weight: var(--light);
+						@include font-line-height(var(--font-xs));
 					}
 				}
 			}

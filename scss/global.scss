@@ -64,8 +64,8 @@ p {
 	margin: 0;
 }
 small {
-	@include font-line-height($font-xs);
-	font-weight: $text-light;
+	@include font-line-height(var(--font-xs));
+	font-weight: var(--light);
 }
 a {
 	display: block;
@@ -75,23 +75,23 @@ svg {
 	height: 10px;
 }
 .mfi-container {
-	max-width: 1400px;
+	max-width: var(--xxl);
 	padding-left: 0;
 	padding-right: 0;
 	margin: 0 auto;
 	@include breakpoint(xl) {
-		max-width: 1140px;
+		max-width: var(--xl);
 	}
 	@include breakpoint(lg) {
-		max-width: 960px;
+		max-width: var(--lg);
 	}
 	@include breakpoint(md) {
-		max-width: 700px;
+		max-width: var(--md);
 	}
 	@include breakpoint(sm-down) {
 		padding-left: 15px;
 		padding-right: 15px;
-		max-width: 540px;
+		max-width: var(--sm);
 	}
 }
 .left,

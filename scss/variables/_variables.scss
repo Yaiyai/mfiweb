@@ -1,10 +1,13 @@
-@import './modules.scss';
-@import './fonts';
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;600;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,900&display=swap');
 
 :root {
 	--module: 24px;
+	--sm: 540px;
+	--md: 700px;
+	--lg: 960px;
+	--xl: 1140px;
+	--xxl: 1400px;
 	--primary: #050652;
 	--secondary: #055251;
 	--third: #7a9cd0;
@@ -15,9 +18,21 @@
 	--font-text: 'Roboto', sans-serif;
 	--font-titles: 'Roboto Slab', sans-serif;
 	--fontawesome: 'FontAwesome';
-	--sm: 540px;
-	--md: 700px;
-	--lg: 960px;
-	--xl: 1140px;
-	--xxl: 1400px;
+	--font-base: 16px;
+	--font-xl: calc(var(--font-base) * 1.5);
+	--font-lg: calc(var(--font-base) * 1.25);
+	--font-md: calc(var(--font-base) * 1.125);
+	--font-sm: calc(var(--font-base) * 0.875);
+	--font-xs: calc(var(--font-base) * 0.75);
+	--h1-size: calc(var(--font-base) * 4.5);
+	--h2-size: 48px;
+	--h3-size: 36px;
+	--h4-size: calc(var(--font-base) * 1.5);
+	--h5-size: calc(var(--font-base) * 1.25);
+	--h5-size: calc(var(--font-base) * 1);
+	--light: 300;
+	--normal: 400;
+	--semibold: 700;
+	--bold: 900;
+	--extrabold: 900;
 }

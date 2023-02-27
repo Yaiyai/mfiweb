@@ -14,24 +14,24 @@ h6 {
 }
 
 h1 {
-	@include font-line-height($h1-size);
+	@include font-line-height(var(--h1-size));
 	@include breakpoint(xl) {
-		@include font-line-height($font-base * 3.9);
+		@include font-line-height(calc(var(--font-base) * 3.9));
 	}
 	@include breakpoint(lg) {
-		@include font-line-height($font-base * 3.3);
+		@include font-line-height(calc(var(--font-base) * 3.3));
 	}
 	@include breakpoint(md) {
 		@include font-line-height(4rem);
 	}
 	@include breakpoint(sm-down) {
-		@include font-line-height($font-base * 3.5);
+		@include font-line-height(calc(var(--font-base) * 3.5));
 	}
 }
 h2 {
 	color: var(--text);
-	font-weight: $titles-bold;
-	@include font-line-height($h2-size);
+	font-weight: var(--bold);
+	@include font-line-height(var(--h2-size));
 	margin-bottom: calc(var(--module) * 2);
 
 	@include breakpoint(xl) {
@@ -44,45 +44,45 @@ h2 {
 		@include font-line-height(32px);
 	}
 	@include breakpoint(sm-down) {
-		@include font-line-height($font-base * 2);
+		@include font-line-height(calc(var(--font-base) * 2));
 	}
 }
 h3 {
-	@include font-line-height($h3-size);
+	@include font-line-height(var(--h3-size));
 	@include breakpoint(lg) {
-		@include font-line-height($font-xl);
+		@include font-line-height(var(--font-xl));
 	}
 	@include breakpoint(md) {
-		@include font-line-height($font-lg);
+		@include font-line-height(var(--font-lg));
 	}
 	@include breakpoint(sm-down) {
-		@include font-line-height($font-xl);
+		@include font-line-height(var(--font-xl));
 	}
 }
 h4 {
-	@include font-line-height($h4-size);
+	@include font-line-height(var(--h4-size));
 }
 h6 {
-	@include font-line-height($h6-size);
+	@include font-line-height(var(--h6-size));
 }
 h5 {
-	@include font-line-height($h5-size);
+	@include font-line-height(var(--h5-size));
 }
 p,
 li {
-	@include font-line-height($font-base);
-	font-weight: $titles-normal;
+	@include font-line-height(var(--font-base));
+	font-weight: var(--normal);
 	@include breakpoint(lg-down) {
-		@include font-line-height($font-sm);
+		@include font-line-height(var(--font-sm));
 	}
 }
 .subtitle {
 	text-transform: uppercase;
 	color: var(--primary);
-	@include font-line-height($font-lg);
-	font-weight: $text-semibold;
+	@include font-line-height(var(--font-lg));
+	font-weight: var(--semibold);
 	@include breakpoint(lg-down) {
-		@include font-line-height($font-md);
+		@include font-line-height(var(--font-md));
 	}
 	@include breakpoint(md-down) {
 		text-align: center;
@@ -100,21 +100,21 @@ li {
 	.ql-size-large {
 		text-transform: uppercase;
 		color: var(--primary);
-		@include font-line-height($font-lg);
-		font-weight: $text-semibold;
+		@include font-line-height(var(--font-lg));
+		font-weight: var(--semibold);
 	}
 	strong {
-		font-weight: $text-semibold;
+		font-weight: var(--semibold);
 	}
 	ul {
 		li {
 			margin-left: 12px;
-			font-weight: $titles-light;
+			font-weight: var(--light);
 
 			&::before {
 				content: '\00bb';
 				margin-right: calc(var(--module) / 4);
-				font-weight: $text-semibold;
+				font-weight: var(--semibold);
 				color: var(--primary);
 			}
 		}
@@ -123,7 +123,7 @@ li {
 		margin-top: 12px;
 		li {
 			margin-left: 24px;
-			font-weight: $titles-light;
+			font-weight: var(--light);
 			&::marker {
 				color: var(--primary);
 			}
@@ -131,17 +131,17 @@ li {
 	}
 	p {
 		em {
-			font-weight: $titles-light;
+			font-weight: var(--light);
 		}
 	}
 	.ql-indent-1,
 	.ql-indent-2 {
 		margin-left: calc(var(--module) * 1);
-		@include font-line-height($font-sm);
+		@include font-line-height(var(--font-sm));
 		&::before {
 			content: '\2234';
 			margin-right: calc(var(--module) / 4);
-			font-weight: $text-semibold;
+			font-weight: var(--semibold);
 			color: var(--primary);
 		}
 	}

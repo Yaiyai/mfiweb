@@ -8,8 +8,8 @@
 
 .my-btn {
 	font-family: var(--font-titles);
-	font-weight: $titles-semibold;
-	font-size: $font-sm;
+	font-weight: var(--semibold);
+	font-size: var(--font-sm);
 	background-color: var(--primary);
 	border: none;
 	color: white;
@@ -56,15 +56,15 @@
 .my-btn-back {
 	color: var(--primary);
 	text-transform: uppercase;
-	font-size: $font-xs;
+	font-size: var(--font-xs);
 }
 
 .my-btn-more {
 	color: var(--secondary);
 	text-transform: uppercase;
-	font-size: $font-xs;
+	font-size: var(--font-xs);
 	text-decoration: none;
-	@include font-line-height($font-xs);
+	@include font-line-height(var(--font-xs));
 	&:hover {
 		color: var(--primary);
 	}

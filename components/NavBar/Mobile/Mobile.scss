@@ -41,7 +41,7 @@
 				padding: calc(var(--module) / 2);
 				a,
 				p {
-					@include font-line-height($font-xl);
+					@include font-line-height(var(--font-xl));
 					text-transform: uppercase;
 					font-family: var(--font-titles);
 					color: var(--primary);
