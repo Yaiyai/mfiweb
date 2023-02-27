@@ -17,16 +17,16 @@ h6 {
 
 h1 {
 	@include line-height.font-line-height(var(--h1-size));
-	@include breakpoint(xl) {
+	@include breakpoints.breakpoint(xl) {
 		@include line-height.font-line-height(calc(var(--font-base) * 3.9));
 	}
-	@include breakpoint(lg) {
+	@include breakpoints.breakpoint(lg) {
 		@include line-height.font-line-height(calc(var(--font-base) * 3.3));
 	}
-	@include breakpoint(md) {
+	@include breakpoints.breakpoint(md) {
 		@include line-height.font-line-height(4rem);
 	}
-	@include breakpoint(sm-down) {
+	@include breakpoints.breakpoint(sm-down) {
 		@include line-height.font-line-height(calc(var(--font-base) * 3.5));
 	}
 }
@@ -36,28 +36,28 @@ h2 {
 	@include line-height.font-line-height(var(--h2-size));
 	margin-bottom: calc(var(--module) * 2);
 
-	@include breakpoint(xl) {
+	@include breakpoints.breakpoint(xl) {
 		@include line-height.font-line-height(42px);
 	}
-	@include breakpoint(lg) {
+	@include breakpoints.breakpoint(lg) {
 		@include line-height.font-line-height(36px);
 	}
-	@include breakpoint(md) {
+	@include breakpoints.breakpoint(md) {
 		@include line-height.font-line-height(32px);
 	}
-	@include breakpoint(sm-down) {
+	@include breakpoints.breakpoint(sm-down) {
 		@include line-height.font-line-height(calc(var(--font-base) * 2));
 	}
 }
 h3 {
 	@include line-height.font-line-height(var(--h3-size));
-	@include breakpoint(lg) {
+	@include breakpoints.breakpoint(lg) {
 		@include line-height.font-line-height(var(--font-xl));
 	}
-	@include breakpoint(md) {
+	@include breakpoints.breakpoint(md) {
 		@include line-height.font-line-height(var(--font-lg));
 	}
-	@include breakpoint(sm-down) {
+	@include breakpoints.breakpoint(sm-down) {
 		@include line-height.font-line-height(var(--font-xl));
 	}
 }
@@ -74,7 +74,7 @@ p,
 li {
 	@include line-height.font-line-height(var(--font-base));
 	font-weight: var(--normal);
-	@include breakpoint(lg-down) {
+	@include breakpoints.breakpoint(lg-down) {
 		@include line-height.font-line-height(var(--font-sm));
 	}
 }
@@ -83,10 +83,10 @@ li {
 	color: var(--primary);
 	@include line-height.font-line-height(var(--font-lg));
 	font-weight: var(--semibold);
-	@include breakpoint(lg-down) {
+	@include breakpoints.breakpoint(lg-down) {
 		@include line-height.font-line-height(var(--font-md));
 	}
-	@include breakpoint(md-down) {
+	@include breakpoints.breakpoint(md-down) {
 		text-align: center;
 	}
 }

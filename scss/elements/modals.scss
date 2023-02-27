@@ -1,3 +1,4 @@
+@use './../mixins/breakpoints.scss';
 @use './../mixins/line-height.scss';
 .my-modals {
 	display: flex;
@@ -19,16 +20,16 @@
 		.modal-dialog {
 			height: auto;
 			max-width: 40%;
-			@include breakpoint(xl) {
+			@include breakpoints.breakpoint(xl) {
 				max-width: 50%;
 			}
-			@include breakpoint(lg) {
+			@include breakpoints.breakpoint(lg) {
 				max-width: 60%;
 			}
-			@include breakpoint(md) {
+			@include breakpoints.breakpoint(md) {
 				max-width: 70%;
 			}
-			@include breakpoint(sm-down) {
+			@include breakpoints.breakpoint(sm-down) {
 				max-width: 95%;
 			}
 			&.modal-dialog-centered {
@@ -45,10 +46,10 @@
 .modal-width {
 	width: 50%;
 	max-width: none !important;
-	@include breakpoint(md) {
+	@include breakpoints.breakpoint(md) {
 		width: 70%;
 	}
-	@include breakpoint(sm-down) {
+	@include breakpoints.breakpoint(sm-down) {
 		width: 90%;
 	}
 }

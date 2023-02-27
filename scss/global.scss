@@ -1,4 +1,5 @@
 @use './mixins/line-height.scss';
+@use './mixins/breakpoints.scss';
 @forward './main';
 
 * {
@@ -81,16 +82,16 @@ svg {
 	padding-left: 0;
 	padding-right: 0;
 	margin: 0 auto;
-	@include breakpoint(xl) {
+	@include breakpoints.breakpoint(xl) {
 		max-width: var(--xl);
 	}
-	@include breakpoint(lg) {
+	@include breakpoints.breakpoint(lg) {
 		max-width: var(--lg);
 	}
-	@include breakpoint(md) {
+	@include breakpoints.breakpoint(md) {
 		max-width: var(--md);
 	}
-	@include breakpoint(sm-down) {
+	@include breakpoints.breakpoint(sm-down) {
 		padding-left: 15px;
 		padding-right: 15px;
 		max-width: var(--sm);
@@ -100,7 +101,7 @@ svg {
 .right {
 	box-sizing: border-box;
 	width: calc((100% / 12) * 6);
-	@include breakpoint(sm-down) {
+	@include breakpoints.breakpoint(sm-down) {
 		width: calc((100% / 12) * 12);
 	}
 }

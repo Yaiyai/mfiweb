@@ -1,3 +1,5 @@
+@use './../../scss/mixins/breakpoints.scss';
+@use './../../scss/mixins/items-grid.scss';
 .pswp-gallery {
 	.pswp-thumbnails {
 		display: flex;
@@ -5,19 +7,19 @@
 		.pswp-thumbnail {
 			overflow: hidden;
 			cursor: pointer;
-			@include breakpoint(xl-up) {
+			@include breakpoints.breakpoint(xl-up) {
 				@include items-grid(6, var(--module));
 				height: 170px;
 			}
-			@include breakpoint(lg) {
+			@include breakpoints.breakpoint(lg) {
 				height: 150px;
 				@include items-grid(5, var(--module));
 			}
-			@include breakpoint(md) {
+			@include breakpoints.breakpoint(md) {
 				height: 150px;
 				@include items-grid(4, var(--module));
 			}
-			@include breakpoint(sm-down) {
+			@include breakpoints.breakpoint(sm-down) {
 				height: 180px;
 				@include items-grid(2, var(--module));
 			}

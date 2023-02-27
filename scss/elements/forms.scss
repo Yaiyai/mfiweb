@@ -1,4 +1,5 @@
 @use './../mixins/line-height.scss';
+@use './../mixins/breakpoints.scss';
 label {
 	font-size: 10px;
 	text-transform: uppercase;
@@ -57,20 +58,20 @@ form {
 		display: flex;
 		flex-direction: row-reverse;
 		align-items: center;
-		@include breakpoint(md-down) {
+		@include breakpoints.breakpoint(md-down) {
 			width: 100%;
 			display: flex;
 			flex-direction: column;
 		}
 		.my-btn {
 			margin-right: calc(var(--module) / 2);
-			@include breakpoint(md-down) {
+			@include breakpoints.breakpoint(md-down) {
 				margin-right: 0;
 			}
 		}
 		.terms {
 			display: flex;
-			@include breakpoint(md-down) {
+			@include breakpoints.breakpoint(md-down) {
 				margin-bottom: var(--module);
 			}
 			label {

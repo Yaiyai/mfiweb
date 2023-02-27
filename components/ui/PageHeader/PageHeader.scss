@@ -1,3 +1,4 @@
+@use './../../../scss/mixins/breakpoints.scss';
 .page-header {
 	width: 100%;
 	background-size: 100%;
@@ -7,7 +8,7 @@
 	position: relative;
 	border-bottom: 5px solid var(--primary);
 	filter: grayscale(0%);
-	@include breakpoint(sm-down) {
+	@include breakpoints.breakpoint(sm-down) {
 		background-size: cover;
 	}
 
