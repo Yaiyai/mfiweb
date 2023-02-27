@@ -1,3 +1,4 @@
+@use './../../scss/mixins/line-height.scss';
 footer {
 	.top {
 		background-color: var(--third);
@@ -13,10 +14,10 @@ footer {
 			h2 {
 				color: white;
 				margin: 0;
-				@include font-line-height(32px);
+				@include line-height.font-line-height(32px);
 				@include breakpoint(sm-down) {
 					margin-bottom: calc(var(--module) * 1);
-					@include font-line-height(var(--font-xl));
+					@include line-height.font-line-height(var(--font-xl));
 				}
 			}
 			.my-btn {
@@ -100,7 +101,7 @@ footer {
 					a {
 						color: white;
 						font-weight: var(--light);
-						@include font-line-height(var(--font-xs));
+						@include line-height.font-line-height(var(--font-xs));
 					}
 				}
 			}

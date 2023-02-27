@@ -1,5 +1,5 @@
-@import './Desktop/Desktop.scss';
-@import './Mobile/Mobile.scss';
+@forward './Desktop/Desktop.scss';
+@forward './Mobile/Mobile.scss';
 
 .main-nav {
 	background-color: white;

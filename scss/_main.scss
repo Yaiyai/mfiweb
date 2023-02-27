@@ -1,14 +1,14 @@
 //Mixins
-@import './mixins/mixins';
+@forward './mixins/mixins';
 
 //Variables
-@import './variables/variables';
+@forward './variables/variables';
 
 //Elements
-@import './elements/elements.scss';
+@forward './elements/elements.scss';
 
 //Components
-@import './../components/components';
+@forward './../components/components';
 
 //Pages
 // @import './../pages/pages';

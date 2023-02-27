@@ -1,4 +1,6 @@
-@import './main';
+@use './mixins/line-height.scss';
+@forward './main';
+
 * {
 	margin: 0;
 	scroll-behavior: smooth;
@@ -64,7 +66,7 @@ p {
 	margin: 0;
 }
 small {
-	@include font-line-height(var(--font-xs));
+	@include line-height.font-line-height(var(--font-xs));
 	font-weight: var(--light);
 }
 a {

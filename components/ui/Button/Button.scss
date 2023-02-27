@@ -1,3 +1,4 @@
+@use './../../../scss/mixins/line-height.scss';
 *[class^='my-btn'] {
 	&:focus,
 	&:active {
@@ -64,7 +65,7 @@
 	text-transform: uppercase;
 	font-size: var(--font-xs);
 	text-decoration: none;
-	@include font-line-height(var(--font-xs));
+	@include line-height.font-line-height(var(--font-xs));
 	&:hover {
 		color: var(--primary);
 	}

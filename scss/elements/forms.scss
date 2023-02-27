@@ -1,3 +1,4 @@
+@use './../mixins/line-height.scss';
 label {
 	font-size: 10px;
 	text-transform: uppercase;
@@ -8,11 +9,11 @@ select,
 textarea {
 	border: var(--grey) 1px solid;
 	border-radius: 0;
-	@include font-line-height(var(--font-xs));
+	@include line-height.font-line-height(var(--font-xs));
 	padding: calc(var(--module) / 3);
 	&::placeholder {
 		display: block;
-		@include font-line-height(var(--font-xs));
+		@include line-height.font-line-height(var(--font-xs));
 		color: var(--grey);
 		padding: calc(var(--module) / 3);
 	}

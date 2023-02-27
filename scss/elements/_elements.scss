@@ -1,5 +1,5 @@
-@import './forms.scss';
-@import './modals.scss';
-@import './gallery.scss';
-@import './legal-elements.scss';
-@import './typography.scss';
+@forward './forms.scss';
+@forward './modals.scss';
+@forward './gallery.scss';
+@forward './legal-elements.scss';
+@forward './typography.scss';

@@ -1,3 +1,5 @@
+@use './../../scss/mixins/line-height.scss';
+@use './../../scss/mixins/breakpoints.scss';
 .orange {
 	color: var(--secondary);
 }
@@ -14,75 +16,75 @@ h6 {
 }
 
 h1 {
-	@include font-line-height(var(--h1-size));
+	@include line-height.font-line-height(var(--h1-size));
 	@include breakpoint(xl) {
-		@include font-line-height(calc(var(--font-base) * 3.9));
+		@include line-height.font-line-height(calc(var(--font-base) * 3.9));
 	}
 	@include breakpoint(lg) {
-		@include font-line-height(calc(var(--font-base) * 3.3));
+		@include line-height.font-line-height(calc(var(--font-base) * 3.3));
 	}
 	@include breakpoint(md) {
-		@include font-line-height(4rem);
+		@include line-height.font-line-height(4rem);
 	}
 	@include breakpoint(sm-down) {
-		@include font-line-height(calc(var(--font-base) * 3.5));
+		@include line-height.font-line-height(calc(var(--font-base) * 3.5));
 	}
 }
 h2 {
 	color: var(--text);
 	font-weight: var(--bold);
-	@include font-line-height(var(--h2-size));
+	@include line-height.font-line-height(var(--h2-size));
 	margin-bottom: calc(var(--module) * 2);
 
 	@include breakpoint(xl) {
-		@include font-line-height(42px);
+		@include line-height.font-line-height(42px);
 	}
 	@include breakpoint(lg) {
-		@include font-line-height(36px);
+		@include line-height.font-line-height(36px);
 	}
 	@include breakpoint(md) {
-		@include font-line-height(32px);
+		@include line-height.font-line-height(32px);
 	}
 	@include breakpoint(sm-down) {
-		@include font-line-height(calc(var(--font-base) * 2));
+		@include line-height.font-line-height(calc(var(--font-base) * 2));
 	}
 }
 h3 {
-	@include font-line-height(var(--h3-size));
+	@include line-height.font-line-height(var(--h3-size));
 	@include breakpoint(lg) {
-		@include font-line-height(var(--font-xl));
+		@include line-height.font-line-height(var(--font-xl));
 	}
 	@include breakpoint(md) {
-		@include font-line-height(var(--font-lg));
+		@include line-height.font-line-height(var(--font-lg));
 	}
 	@include breakpoint(sm-down) {
-		@include font-line-height(var(--font-xl));
+		@include line-height.font-line-height(var(--font-xl));
 	}
 }
 h4 {
-	@include font-line-height(var(--h4-size));
+	@include line-height.font-line-height(var(--h4-size));
 }
 h6 {
-	@include font-line-height(var(--h6-size));
+	@include line-height.font-line-height(var(--h6-size));
 }
 h5 {
-	@include font-line-height(var(--h5-size));
+	@include line-height.font-line-height(var(--h5-size));
 }
 p,
 li {
-	@include font-line-height(var(--font-base));
+	@include line-height.font-line-height(var(--font-base));
 	font-weight: var(--normal);
 	@include breakpoint(lg-down) {
-		@include font-line-height(var(--font-sm));
+		@include line-height.font-line-height(var(--font-sm));
 	}
 }
 .subtitle {
 	text-transform: uppercase;
 	color: var(--primary);
-	@include font-line-height(var(--font-lg));
+	@include line-height.font-line-height(var(--font-lg));
 	font-weight: var(--semibold);
 	@include breakpoint(lg-down) {
-		@include font-line-height(var(--font-md));
+		@include line-height.font-line-height(var(--font-md));
 	}
 	@include breakpoint(md-down) {
 		text-align: center;
@@ -100,7 +102,7 @@ li {
 	.ql-size-large {
 		text-transform: uppercase;
 		color: var(--primary);
-		@include font-line-height(var(--font-lg));
+		@include line-height.font-line-height(var(--font-lg));
 		font-weight: var(--semibold);
 	}
 	strong {
@@ -137,7 +139,7 @@ li {
 	.ql-indent-1,
 	.ql-indent-2 {
 		margin-left: calc(var(--module) * 1);
-		@include font-line-height(var(--font-sm));
+		@include line-height.font-line-height(var(--font-sm));
 		&::before {
 			content: '\2234';
 			margin-right: calc(var(--module) / 4);
