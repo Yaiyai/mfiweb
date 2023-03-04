@@ -2,22 +2,17 @@
 @forward './Mobile/Mobile.scss';
 @use './../../scss/mixins/breakpoints.scss';
 .main-nav {
-	background-color: white;
-	border-bottom: solid 1px var(--grey);
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 5;
 	width: 100vw;
-
 	.mfi-container {
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
-
 		.logo {
-			width: 130px;
-			height: 40px;
+			width: 90px;
+			height: 50px;
 			overflow: hidden;
 			margin: 0;
 			@include breakpoints.breakpoint(md) {

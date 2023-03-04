@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { FaChevronRight } from 'react-icons/fa';
+import { FaArrowLeft, FaArrowRight, FaChevronRight } from 'react-icons/fa';
 
 const Button = ({ link = false, type, text }) => {
 	return (
@@ -9,32 +9,32 @@ const Button = ({ link = false, type, text }) => {
 				(link ? (
 					<Link href={link}>
 						{' '}
-						{text} <FaChevronRight />{' '}
+						{text} <FaArrowRight />{' '}
 					</Link>
 				) : (
 					<button className='my-btn'>
-						{text} <FaChevronRight />
+						{text} <FaArrowRight />
 					</button>
 				))}
 			{type === 'secondary' &&
 				(link ? (
 					<Link href={link} lassName='my-btn secondary'>
-						{text} <FaChevronRight />
+						{text} <FaArrowRight />
 					</Link>
 				) : (
 					<button className='my-btn secondary'>
-						{text} <FaChevronRight />
+						{text} <FaArrowRight />
 					</button>
 				))}
 			{type === 'more' &&
 				(link ? (
 					<Link href={link} className='my-btn-more'>
 						{' '}
-						Saber más <FaChevronRight />{' '}
+						Saber más <FaArrowRight />{' '}
 					</Link>
 				) : (
 					<button className='my-btn-more'>
-						Saber más <FaChevronRight />
+						Saber más <FaArrowRight />
 					</button>
 				))}
 		</>

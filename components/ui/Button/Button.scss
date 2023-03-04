@@ -9,20 +9,26 @@
 
 .my-btn {
 	font-family: var(--font-titles);
-	font-weight: var(--semibold);
 	font-size: var(--font-sm);
-	background-color: var(--primary);
+	line-height: 16px;
+	background-color: white;
 	border: none;
-	color: white;
-	padding: 10px calc(var(--module) / 3);
-	text-transform: uppercase;
+	color: var(--primary);
+	padding: 8px;
 	text-decoration: none;
 	position: relative;
+	border-radius: 50px;
+	display: flex;
+	align-items: center;
+	border: 1px solid var(--light-grey);
 
 	&:hover {
-		background-color: var(--secondary);
-		color: white;
-		text-decoration: none;
+		background-color: var(--primary);
+		color: var(--secondary);
+		border-color: var(--secondary);
+		svg {
+			color: var(--secondary);
+		}
 	}
 
 	&.secondary {
@@ -51,6 +57,13 @@
 	&.mini {
 		font-size: 10px;
 		padding: calc(var(--module) / 6) calc(var(--module) / 4);
+	}
+	svg {
+		width: 12px;
+		height: 12px;
+		color: var(--secondary);
+		background-color: transparent;
+		margin-left: 4px;
 	}
 }
 
