@@ -1,5 +1,6 @@
 header {
-	padding-bottom: 150px;
+	padding-bottom: 300px;
+	position: relative;
 	.header-text {
 		padding-top: 125px;
 		display: flex;
@@ -54,6 +55,56 @@ header {
 			background-color: white;
 			h2 {
 				margin: 12px 0 24px;
+			}
+		}
+	}
+	.features {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		.mfi-container {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.each-feat {
+			background-color: white;
+			max-width: calc((100% / #{var(--feats)}));
+			min-width: calc((100% / #{var(--feats)}));
+			flex-grow: 1;
+			padding: 36px var(--module);
+			// &:last-of-type {
+			// 	margin-right: 0;
+			// }
+
+			// margin-bottom: 1px;
+			// margin-right: 1px;
+			box-sizing: border-box;
+			border-right: 1px solid var(--light-grey);
+			border-top: 3px solid var(--light-grey);
+			border-bottom: 1px solid var(--light-grey);
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			&:first-of-type {
+				border-left: 1px solid var(--light-grey);
+			}
+			svg {
+				color: var(--secondary);
+				width: 10%;
+				height: fit-content;
+				margin-right: 8px;
+			}
+			.feat-title {
+				font-size: 19px;
+				line-height: 23px;
+				color: var(--primary);
+			}
+			&:hover {
+				border-top-color: var(--secondary);
+				.feat-title {
+					color: var(--secondary);
+				}
 			}
 		}
 	}

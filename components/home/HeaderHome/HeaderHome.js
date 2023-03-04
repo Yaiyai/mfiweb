@@ -1,6 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { FaFacebook, FaLaptop, FaLinkedin } from 'react-icons/fa';
 
 const HeaderHome = ({ data, secondBlock }) => {
+	const [features, setFeatures] = useState([secondBlock?.features]);
+	const style = { '--feats': secondBlock?.features?.length };
+	const list = secondBlock?.features.map((feat) => (
+		<article className='each-feat' key={'feature-' + feat} style={style}>
+			<FaLaptop />
+			<p className='feat-title'>{feat}</p>
+		</article>
+	));
 	useEffect(() => {
 		console.log(data);
 	}, []);
@@ -25,6 +34,9 @@ const HeaderHome = ({ data, secondBlock }) => {
 						<div dangerouslySetInnerHTML={{ __html: secondBlock?.text }}></div>
 					</div>
 				</div>
+			</div>
+			<div className='features'>
+				<div className='mfi-container'>{list}</div>
 			</div>
 		</header>
 	);
