@@ -7,6 +7,7 @@
 	left: 0;
 	z-index: 5;
 	width: 100vw;
+	background-color: white;
 	.mfi-container {
 		display: flex;
 		align-items: center;
@@ -29,4 +30,7 @@
 			}
 		}
 	}
+}
+.false-nav {
+	height: 82px;
 }
