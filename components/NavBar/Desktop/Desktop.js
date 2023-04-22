@@ -36,7 +36,7 @@ const Desktop = ({ company }) => {
 				<a href={company?.companyFetched?.linkedin} className='rrss-icon' target='new'>
 					<FaLinkedin />
 				</a>
-				<a href={company?.companyFetched?.linkedin} className='rrss-icon' target='new'>
+				<a href={company?.companyFetched?.facebook} className='rrss-icon' target='new'>
 					<FaFacebook />
 				</a>
 				<div className='line'></div>

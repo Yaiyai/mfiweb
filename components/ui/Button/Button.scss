@@ -42,6 +42,18 @@
 			border-bottom: 3px solid var(--secondary);
 		}
 	}
+	&.dark {
+		background-color: transparent;
+		color: white;
+		border: 1px solid var(--secondary);
+		&:hover {
+			background-color: var(--secondary);
+			border-color: var(--primary);
+			svg {
+				color: white;
+			}
+		}
+	}
 	&.third {
 		background-color: white;
 		color: var(--secondary);
