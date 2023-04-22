@@ -2,7 +2,7 @@
 @use './../../scss/mixins/breakpoints.scss';
 footer {
 	padding: 48px 0;
-	border-top: 3px solid #eaecf0;
+	border-top: 3px solid var(--light-grey);
 	.top {
 		background-color: white;
 		.down {

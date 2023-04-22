@@ -15,9 +15,9 @@
 			@include grid.items-grid(5, 1px);
 			background-color: white;
 			margin: 0;
-			border-right: 1px solid #eaecf0;
-			border-top: 3px solid #eaecf0;
-			border-bottom: 1px solid #eaecf0;
+			border-right: 1px solid var(--light-grey);
+			border-top: 3px solid var(--light-grey);
+			border-bottom: 1px solid var(--light-grey);
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
@@ -41,6 +41,10 @@
 					width: 100%;
 					height: 100%;
 				}
+			}
+			&:first-of-type,
+			&:nth-child(6) {
+				border-left: 1px solid var(--light-grey);
 			}
 
 			.service-content {
