@@ -20,6 +20,7 @@ const HeaderHome = ({ data, secondBlock }) => {
 				<h1 className='center'>{data?.title}</h1>
 				<h2 className='center'>{data?.subtitle}</h2>
 			</div>
+			<a id='nosotros'></a>
 			<div className='first-block'>
 				<figure>
 					<img src={data?.uniqueImage} alt='MFi' />

@@ -21,7 +21,10 @@ export default function Home({ headerHome, secondBlock, thirdBlock, servicesBloc
 			</Head>
 			<main>
 				<HeaderHome data={headerHome} secondBlock={secondBlock} />
+
 				<SecondBlock data={thirdBlock} />
+				<a id='servicios'></a>
+
 				<ThirdBlock data={servicesBlock} />
 			</main>
 		</>

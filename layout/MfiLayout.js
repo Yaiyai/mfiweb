@@ -22,7 +22,7 @@ const MfiLayout = (props) => {
 			<NavBar company={companyFetched} />
 			<div className='false-nav'></div>
 			<main>{children}</main>
-			{/* <Footer company={companyFetched} /> */}
+			<Footer company={companyFetched} />
 		</>
 	);
 };

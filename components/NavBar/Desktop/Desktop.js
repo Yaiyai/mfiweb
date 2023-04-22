@@ -20,10 +20,14 @@ const Desktop = ({ company }) => {
 					</Link>
 				</li>
 				<li>
-					<Link href='/partners' className={active === 'servicios' ? 'active' : null} onClick={() => setActive('servicios')}>
+					<a href='/#servicios' className={active === 'servicios' ? 'active' : null} onClick={() => setActive('servicios')}>
 						{' '}
 						Servicios&Partners
-					</Link>
+					</a>
+					{/* <Link href='/#servicios' className={active === 'servicios' ? 'active' : null} onClick={() => setActive('servicios')}>
+						{' '}
+						Servicios&Partners
+					</Link> */}
 				</li>
 			</ul>
 			<ul className='important'>

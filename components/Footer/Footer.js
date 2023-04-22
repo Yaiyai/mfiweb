@@ -14,25 +14,19 @@ const Footer = ({ company }) => {
 		<footer>
 			<article className='top'>
 				<div className='mfi-container'>
-					<div className='up'>
-						<h2>
-							En <span className='orange'>mfi</span> queremos ser tu <span className='orange'>partner digital</span>
-						</h2>
-						<Link href='/#contacto'>¡Hablemos!</Link>
-					</div>
 					<nav className='down'>
 						<div className='left'>
 							<Link href='/'>
 								<figure className='logo'>
-									<img src={company?.companyFetched?.secondaryLogo} alt='mfi Logo' />
+									<img src={company?.companyFetched?.mainLogo} alt='mfi Logo' />
 								</figure>
 							</Link>
 							<ul className='footer-links'>
 								<li>
-									<Link href='/#quienes-somos'>Quiénes Somos</Link>
+									<Link href='/#nosotros'>Nosotros</Link>
 								</li>
 								<li>
-									<Link href='/servicios'>Servicios</Link>
+									<Link href='/#servicios'>Servicios&Partners</Link>
 								</li>
 							</ul>
 						</div>
