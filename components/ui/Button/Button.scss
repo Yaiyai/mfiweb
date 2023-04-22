@@ -54,6 +54,22 @@
 			}
 		}
 	}
+	&.outlined {
+		background-color: transparent;
+		color: white;
+		border: 1px solid white;
+		svg {
+			color: white;
+		}
+		&:hover {
+			background-color: white;
+			border-color: var(--secondary);
+			color: var(--secondary);
+			svg {
+				color: var(--secondary);
+			}
+		}
+	}
 	&.third {
 		background-color: white;
 		color: var(--secondary);

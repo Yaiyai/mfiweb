@@ -36,6 +36,16 @@ const Button = ({ link = false, type, text }) => {
 						{text} <FaArrowRight />
 					</button>
 				))}
+			{type === 'outlined' &&
+				(link ? (
+					<Link href={link} lassName='my-btn outlined'>
+						{text} <FaArrowRight />
+					</Link>
+				) : (
+					<button className='my-btn outlined'>
+						{text} <FaArrowRight />
+					</button>
+				))}
 			{type === 'more' &&
 				(link ? (
 					<Link href={link} className='my-btn-more'>

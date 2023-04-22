@@ -12,6 +12,11 @@ const SecondBlock = ({ data }) => {
 				<figure>
 					<img src={data?.uniqueImage} alt='MFi Tienda' />
 				</figure>
+				<div className='quote'>
+					<p>«Si su negocio no está en internet, su negocio no existe»</p>
+					<p>Bill Gates</p>
+					<Button type={'outlined'} text='Diseño Web' />
+				</div>
 			</div>
 			<div className='right'>
 				<h2 className='white'> {data?.title} </h2>
