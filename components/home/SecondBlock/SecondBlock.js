@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 
 const SecondBlock = ({ data }) => {
 	useEffect(() => {
-		console.log(data);
+		// console.log(data);
 	}, []);
 
 	return (

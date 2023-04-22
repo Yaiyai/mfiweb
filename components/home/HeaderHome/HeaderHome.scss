@@ -73,12 +73,6 @@ header {
 			min-width: calc((100% / #{var(--feats)}));
 			flex-grow: 1;
 			padding: 36px var(--module);
-			// &:last-of-type {
-			// 	margin-right: 0;
-			// }
-
-			// margin-bottom: 1px;
-			// margin-right: 1px;
 			box-sizing: border-box;
 			border-right: 1px solid var(--light-grey);
 			border-top: 3px solid var(--light-grey);
