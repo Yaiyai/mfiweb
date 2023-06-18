@@ -28,6 +28,11 @@ section.tienda {
 			padding: 64px;
 			padding-left: 132px;
 			background-color: var(--secondary);
+			@media (min-width: 768px) and (max-width: 991px) {
+				top: 70%;
+				width: 70%;
+				padding-left: 70px;
+			}
 			p {
 				font-size: 16px;
 				line-height: 19px;
@@ -46,14 +51,25 @@ section.tienda {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+		@media (min-width: 768px) and (max-width: 991px) {
+			padding-left: 40px;
+			padding-right: 60px;
+		}
 		.store-feat {
 			margin-top: 56px;
 			display: flex;
 			justify-content: space-between;
+			@media (min-width: 768px) and (max-width: 991px) {
+				flex-direction: column;
+			}
 			.each-store-feat {
 				display: flex;
 				align-items: flex-end;
 				width: 49.5%;
+				@media (min-width: 768px) and (max-width: 991px) {
+					width: 100%;
+					margin-bottom: 24px;
+				}
 				.fix {
 					display: flex;
 					flex-direction: column;

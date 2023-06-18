@@ -21,6 +21,9 @@ footer {
 					height: 38px;
 					overflow: hidden;
 					margin: 0;
+					@media (min-width: 768px) and (max-width: 991px) {
+						width: 54px;
+					}
 					img {
 						object-fit: contain;
 						object-position: center;

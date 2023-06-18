@@ -1,11 +1,7 @@
 import Button from '@/components/ui/Button/Button';
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const SecondBlock = ({ data }) => {
-	useEffect(() => {
-		// console.log(data);
-	}, []);
-
 	return (
 		<section className='tienda'>
 			<div className='left'>
