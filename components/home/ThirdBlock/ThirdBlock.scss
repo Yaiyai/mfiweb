@@ -12,7 +12,12 @@
 		display: flex;
 		flex-wrap: wrap;
 		.each-service {
-			@include grid.items-grid(5, 1px);
+			@media (min-width: 992px) {
+				@include grid.items-grid(5, 1px);
+			}
+			@media (min-width: 768px) and (max-width: 991px) {
+				@include grid.items-grid(3, 1px);
+			}
 			background-color: white;
 			margin: 0;
 			border-right: 1px solid var(--light-grey);

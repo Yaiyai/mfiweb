@@ -1,30 +1,40 @@
 header {
-	padding-bottom: 300px;
+	padding-bottom: 547px;
 	position: relative;
+	@media (min-width: 768px) and (max-width: 991px) {
+		padding-bottom: 519px;
+	}
 	.header-text {
 		padding-top: 125px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
-		h2 {
-			font-size: 32px;
-			line-height: 38px;
-		}
+		// h2 {
+		// 	font-size: 32px;
+		// 	line-height: 38px;
+		// }
 	}
 	.first-block {
 		margin-top: 125px;
 		position: relative;
+		@media (min-width: 768px) and (max-width: 991px) {
+			margin-top: 55px;
+		}
 		figure {
 			width: 60%;
-			height: 0;
 			padding-bottom: 40%;
+			height: 0;
 			overflow: hidden;
 			margin: 0;
 			position: relative;
 			left: 0;
 			top: 0;
 			z-index: 0;
+			@media (min-width: 768px) and (max-width: 991px) {
+				width: 70%;
+				padding-bottom: 50%;
+			}
 			img {
 				position: absolute;
 				left: 0;
@@ -43,16 +53,27 @@ header {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-end;
+		@media (min-width: 768px) and (max-width: 991px) {
+			width: 70%;
+			top: 170px;
+		}
 		.first-text {
 			width: 50%;
 			padding: 48px;
 			padding-right: 200px;
 			background-color: var(--primary);
+			@media (min-width: 768px) and (max-width: 991px) {
+				width: 90%;
+				padding-right: 60px;
+			}
 		}
 		.second-text {
 			padding: 48px;
 			padding-right: 200px;
 			background-color: white;
+			@media (min-width: 768px) and (max-width: 991px) {
+				padding-right: 60px;
+			}
 			h2 {
 				margin: 12px 0 24px;
 			}
@@ -69,8 +90,12 @@ header {
 		}
 		.each-feat {
 			background-color: white;
-			max-width: calc((100% / #{var(--feats)}));
-			min-width: calc((100% / #{var(--feats)}));
+			max-width: calc((100% / var(--feats)));
+			min-width: calc((100% / var(--feats)));
+			@media (min-width: 768px) and (max-width: 991px) {
+				max-width: calc((100% / calc(var(--feats) * 0.6)));
+				min-width: calc((100% / calc(var(--feats) * 0.6)));
+			}
 			flex-grow: 1;
 			padding: 36px var(--module);
 			box-sizing: border-box;

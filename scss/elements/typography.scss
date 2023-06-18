@@ -20,6 +20,8 @@ h1 {
 	@include breakpoints.breakpoint(lg) {
 	}
 	@include breakpoints.breakpoint(md) {
+		font-size: calc(var(--h1-size) * 0.7);
+		line-height: calc(68px * 0.7);
 	}
 	@include breakpoints.breakpoint(sm-down) {
 	}
@@ -27,12 +29,14 @@ h1 {
 h2 {
 	font-weight: var(--bold);
 	font-size: var(--h2-size);
-	line-height: 58px;
+	line-height: 38px;
 	@include breakpoints.breakpoint(xl) {
 	}
 	@include breakpoints.breakpoint(lg) {
 	}
 	@include breakpoints.breakpoint(md) {
+		font-size: calc(var(--h2-size) * 0.7);
+		line-height: calc(38px * 0.7);
 	}
 	@include breakpoints.breakpoint(sm-down) {
 	}
