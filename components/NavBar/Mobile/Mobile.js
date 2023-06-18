@@ -21,20 +21,20 @@ const Mobile = ({ company, menuHeight }) => {
 
 	return (
 		<div className='mobile-nav'>
-			<Link href='/#contacto' onClick={closeMenu} className='contact-btn'>
+			{/* <Link href='/#contacto' onClick={closeMenu} className='contact-btn'>
 				{' '}
 				Contacto{' '}
-			</Link>
+			</Link> */}
 			{!showMenu ? <HiMenuAlt3 className='menu-btn' onClick={() => manageNav()} /> : <HiX className='menu-btn' onClick={() => manageNav()} />}
 			<div ref={subMenu} className={showMenu ? `sub-menu show` : 'sub-menu'}>
 				<ul>
 					<li>
-						<Link href='/#quienes-somos'>
-							<span onClick={closeMenu}>Quiénes Somos</span>
+						<Link href='/#nosotros'>
+							<span onClick={closeMenu}>Nosotros</span>
 						</Link>
 					</li>
 					<li>
-						<Link href='/servicios'>
+						<Link href='/#servicios'>
 							<span onClick={closeMenu}>Servicios</span>
 						</Link>
 					</li>

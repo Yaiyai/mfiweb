@@ -22,9 +22,10 @@ export default function Home({ headerHome, secondBlock, thirdBlock, servicesBloc
 			<main>
 				<HeaderHome data={headerHome} secondBlock={secondBlock} />
 
+				<a id='nosotros'></a>
 				<SecondBlock data={thirdBlock} />
-				<a id='servicios'></a>
 
+				<a id='servicios'></a>
 				<ThirdBlock data={servicesBlock} />
 			</main>
 		</>
