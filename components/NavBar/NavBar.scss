@@ -11,6 +11,9 @@
 	.mfi-container {
 		display: flex;
 		align-items: center;
+		@include breakpoints.breakpoint(sm-down) {
+			padding: 8px 0;
+		}
 		.logo {
 			width: 90px;
 			height: 50px;
@@ -33,4 +36,7 @@
 }
 .false-nav {
 	height: 82px;
+	@media (max-width: 767px) {
+		display: none;
+	}
 }

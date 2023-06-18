@@ -24,6 +24,8 @@ h1 {
 		line-height: calc(68px * 0.7);
 	}
 	@include breakpoints.breakpoint(sm-down) {
+		font-size: calc(var(--h1-size) * 0.7);
+		line-height: calc(68px * 0.7);
 	}
 }
 h2 {
