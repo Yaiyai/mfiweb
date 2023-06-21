@@ -1,7 +1,7 @@
 import Button from '@/components/ui/Button/Button';
 import Link from 'next/link';
 import React, { useState } from 'react';
-import { FaFacebook, FaLinkedin } from 'react-icons/fa';
+import { FaArrowRight, FaFacebook, FaLinkedin } from 'react-icons/fa';
 
 const Desktop = ({ company }) => {
 	const [active, setActive] = useState('home');
@@ -40,11 +40,14 @@ const Desktop = ({ company }) => {
 				<a href={company?.companyFetched?.linkedin} className='rrss-icon' target='new'>
 					<FaLinkedin />
 				</a>
-				<a href={company?.companyFetched?.facebook} className='rrss-icon' target='new'>
+				{/* <a href={company?.companyFetched?.facebook} className='rrss-icon' target='new'>
 					<FaFacebook />
-				</a>
+				</a> */}
 				<div className='line'></div>
-				<Button type={'primary'} text='Ver tienda' />
+				<a className='my-btn' href='https://www.nanosystems.it/public/download/Supremo.exe'>
+					Soporte Técnico Remoto
+					<FaArrowRight />
+				</a>
 			</ul>
 		</article>
 	);
