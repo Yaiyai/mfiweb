@@ -1,5 +1,9 @@
 @use './../scss/mixins/items-grid.scss' as grid;
 .kit-digital {
+	@media (max-width: 991px) {
+		padding-top: 70px;
+	}
+
 	h1 {
 		padding: 48px 0;
 	}
@@ -10,6 +14,9 @@
 
 .subvenciones {
 	padding-bottom: calc(#{var(--module)} * 4);
+	@media (max-width: 991px) {
+		padding-top: 70px;
+	}
 	.all-subvs {
 		display: flex;
 		flex-wrap: wrap;

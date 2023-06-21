@@ -3,6 +3,9 @@
 footer {
 	padding: 48px 0;
 	border-top: 3px solid var(--light-grey);
+	@include breakpoints.breakpoint(sm-down) {
+		padding-top: 24px;
+	}
 	.top {
 		background-color: white;
 		.down {
@@ -11,20 +14,25 @@ footer {
 			justify-content: space-between;
 			align-items: center;
 			@include breakpoints.breakpoint(sm-down) {
-				display: none;
+				flex-direction: column;
 			}
 			.left {
 				display: flex;
 				align-items: center;
 				flex-grow: 1;
 				width: fit-content;
+				@include breakpoints.breakpoint(sm-down) {
+					width: 100%;
+					flex-direction: column;
+				}
 				.logo {
 					width: 114px;
 					height: 38px;
 					overflow: hidden;
 					margin: 0;
-					@media (min-width: 768px) and (max-width: 991px) {
-						width: 54px;
+					@media (max-width: 991px) {
+						// width: 54px;
+						height: 78px;
 					}
 					img {
 						object-fit: contain;
@@ -38,6 +46,9 @@ footer {
 					align-items: center;
 					padding: 0 calc(var(--module) * 1);
 					width: fit-content;
+					@include breakpoints.breakpoint(sm-down) {
+						flex-direction: column;
+					}
 					a {
 						font-family: var(--font-titles);
 						color: var(--primary);
@@ -45,6 +56,9 @@ footer {
 						font-size: var(--font-xs);
 						font-weight: var(--light);
 						opacity: 0.5;
+						@include breakpoints.breakpoint(sm-down) {
+							padding: 12px 0;
+						}
 						&:hover {
 							opacity: 1;
 						}
@@ -56,9 +70,14 @@ footer {
 				align-items: center;
 				justify-content: flex-end;
 				width: fit-content;
+				gap: calc(var(--module) / 4);
+
+				@include breakpoints.breakpoint(sm-down) {
+					justify-content: center;
+					width: 100%;
+				}
 				a {
 					color: var(--primary);
-					margin-left: calc(var(--module) / 4);
 					opacity: 0.5;
 					&:hover {
 						opacity: 1;

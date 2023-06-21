@@ -35,6 +35,11 @@ main {
 		opacity: 0.05;
 		z-index: -1;
 	}
+	@media (max-width: 991px) {
+		&::before {
+			display: none;
+		}
+	}
 }
 
 button {
