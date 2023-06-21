@@ -16,6 +16,8 @@ footer {
 			.left {
 				display: flex;
 				align-items: center;
+				flex-grow: 1;
+				width: fit-content;
 				.logo {
 					width: 114px;
 					height: 38px;
@@ -35,6 +37,7 @@ footer {
 					display: flex;
 					align-items: center;
 					padding: 0 calc(var(--module) * 1);
+					width: fit-content;
 					a {
 						font-family: var(--font-titles);
 						color: var(--primary);
@@ -52,6 +55,7 @@ footer {
 				display: flex;
 				align-items: center;
 				justify-content: flex-end;
+				width: fit-content;
 				a {
 					color: var(--primary);
 					margin-left: calc(var(--module) / 4);

@@ -31,6 +31,9 @@ const Footer = ({ company }) => {
 								<li>
 									<Link href='/kit-digital'>Kit Digital</Link>
 								</li>
+								<li>
+									<Link href='/subvenciones'>Subvenciones</Link>
+								</li>
 							</ul>
 						</div>
 						<div className='right'>
