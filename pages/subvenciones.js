@@ -14,13 +14,13 @@ export default function Subvenciones({ subvenciones }) {
 			<Head>
 				<meta name='description' content='Subvenciones MFi' />
 
-				<meta name='robots' content='index, follow' />
-				<meta name='googlebot' content='index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' />
-				<meta name='bingbot' content='index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' />
+				<meta name='robots' content='noindex, nofollow' />
+				<meta name='googlebot' content='noindex, nofollow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' />
+				<meta name='bingbot' content='noindex, nofollow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' />
 
 				<meta property='og:title' content='MFi || Subvenciones' />
 				<meta property='og:type' content='website' />
-				<meta property='og:image' content={subvenciones?.uniqueImage} />
+				<meta property='og:image' content='https://res.cloudinary.com/mfi-app/image/upload/v1652716405/web/lpopzf8n1bkjxst5dc4e.png' />
 				<meta property='og:url' content=' http://www.mfi.es/subvenciones' />
 				<meta property='og:description' content='Subvenciones MFi' />
 				<link rel='canonical' href='http://www.mfi.es/subvenciones'></link>

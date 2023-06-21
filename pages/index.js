@@ -17,6 +17,17 @@ export default function Home({ headerHome, secondBlock, thirdBlock, servicesBloc
 				<title>Mediavilla Fernández Informática</title>
 				<meta name='description' content='Mediavilla Fernández Informática' />
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
+				<meta name='description' content='MFi Servicios informáticos' />
+
+				<meta name='robots' content='noindex, nofollow' />
+				<meta name='googlebot' content='noindex, nofollow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' />
+				<meta name='bingbot' content='noindex, nofollow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' />
+
+				<meta property='og:title' content='MFi || Servicios Informáticos' />
+				<meta property='og:type' content='website' />
+				<meta property='og:image' content='https://res.cloudinary.com/mfi-app/image/upload/v1652716405/web/lpopzf8n1bkjxst5dc4e.png' />
+				<meta property='og:url' content=' http://www.mfi.es/' />
+				<link rel='canonical' href='http://www.mfi.es/'></link>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<main>
