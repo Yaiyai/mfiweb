@@ -30,7 +30,7 @@ const SecondBlock = ({ data }) => {
 						</figure>
 						<div className='fix'>
 							<p>{data?.features[1]}</p>
-							<Button type={'dark'} text='Ir' />
+							{/* <Button type={'dark'} text='Ir' /> */}
 						</div>
 					</div>
 				</div>
