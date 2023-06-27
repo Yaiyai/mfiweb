@@ -14,9 +14,9 @@ export default function Subvenciones({ subvenciones }) {
 			<Head>
 				<meta name='description' content='Subvenciones MFi' />
 
-				<meta name='robots' content='noindex, nofollow' />
-				<meta name='googlebot' content='noindex, nofollow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' />
-				<meta name='bingbot' content='noindex, nofollow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' />
+				<meta name='robots' content='index, follow' />
+				<meta name='googlebot' content='index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' />
+				<meta name='bingbot' content='index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' />
 
 				<meta property='og:title' content='MFi || Subvenciones' />
 				<meta property='og:type' content='website' />
@@ -25,7 +25,7 @@ export default function Subvenciones({ subvenciones }) {
 				<meta property='og:description' content='Subvenciones MFi' />
 				<link rel='canonical' href='http://www.mfi.es/subvenciones'></link>
 
-				<title>Mediavilla Fernández Informática</title>
+				<title>MFi</title>
 			</Head>
 			<main className='mfi-container subvenciones'>
 				<h1>{subvenciones?.title}</h1>

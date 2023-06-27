@@ -2,21 +2,15 @@ import Head from 'next/head';
 import { getCompany } from '../api/company';
 import { getSection } from '../api/sections';
 
-import { useEffect } from 'react';
-
 export default function KitDigital({ kitDigital }) {
-	useEffect(() => {
-		console.log(kitDigital);
-	}, []);
-
 	return (
 		<>
 			<Head>
 				<meta name='description' content='Kit Digital MFi' />
 
-				<meta name='robots' content='noindex, nofollow' />
-				<meta name='googlebot' content='noindex, nofollow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' />
-				<meta name='bingbot' content='noindex, nofollow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' />
+				<meta name='robots' content='index, follow' />
+				<meta name='googlebot' content='index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' />
+				<meta name='bingbot' content='index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' />
 
 				<meta property='og:title' content='MFi || Kit Digital' />
 				<meta property='og:type' content='website' />
@@ -25,7 +19,7 @@ export default function KitDigital({ kitDigital }) {
 				<meta property='og:description' content='Kit Digital MFi' />
 				<link rel='canonical' href='http://www.mfi.es/kit-digital'></link>
 
-				<title>Mediavilla Fernández Informática</title>
+				<title>MFi</title>
 			</Head>
 			<main className='mfi-container kit-digital'>
 				<h1>{kitDigital?.title}</h1>
