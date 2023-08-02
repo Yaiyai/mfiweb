@@ -1,10 +1,10 @@
 header {
 	padding-bottom: 380px;
 	position: relative;
-	@media (min-width: 768px) and (max-width: 991px) {
-		padding-bottom: 519px;
-	}
-	@media (max-width: 767px) {
+	// @media (min-width: 768px) and (max-width: 991px) {
+	// 	padding-bottom: 519px;
+	// }
+	@media (max-width: 991px) {
 		padding-bottom: 20px;
 	}
 	.header-text {
@@ -14,7 +14,7 @@ header {
 		align-items: center;
 		text-align: center;
 		h2 {
-			@media (max-width: 767px) {
+			@media (max-width: 991pxpx) {
 				margin-top: 20px;
 			}
 		}
@@ -69,7 +69,7 @@ header {
 			width: 70%;
 			top: 170px;
 		}
-		@media (max-width: 767px) {
+		@media (max-width: 991px) {
 			position: static;
 			width: 100vw;
 		}
@@ -82,7 +82,7 @@ header {
 				width: 90%;
 				padding-right: 60px;
 			}
-			@media (max-width: 767px) {
+			@media (max-width: 991px) {
 				position: static;
 				padding-right: 0;
 				padding: 20px;
@@ -96,7 +96,7 @@ header {
 			@media (min-width: 768px) and (max-width: 991px) {
 				padding-right: 60px;
 			}
-			@media (max-width: 767px) {
+			@media (max-width: 991px) {
 				position: static;
 				padding-right: 0;
 				padding: 20px;
@@ -115,7 +115,11 @@ header {
 		bottom: 0;
 		left: 0;
 		width: 100vw;
-		@media (max-width: 767px) {
+		@media (min-width: 992px) and (max-width: 1285px) {
+			top: 100vw;
+		}
+
+		@media (max-width: 991px) {
 			position: static;
 		}
 		.mfi-container {
