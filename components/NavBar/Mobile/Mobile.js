@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React, { useRef, useState } from 'react';
-import { FaLinkedin } from 'react-icons/fa';
+import { FaArrowRight, FaLinkedin } from 'react-icons/fa';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
 import { GrClose } from 'react-icons/gr';
 
@@ -28,6 +28,10 @@ const Mobile = ({ company, menuHeight }) => {
 			{!showMenu ? <HiMenuAlt3 className='menu-btn' onClick={() => manageNav()} /> : <HiX className='menu-btn' onClick={() => manageNav()} />}
 			<div ref={subMenu} className={showMenu ? `sub-menu show` : 'sub-menu'}>
 				<ul>
+					<a className='my-btn' href='https://www.nanosystems.it/public/download/Supremo.exe'>
+						Soporte Técnico Remoto
+						<FaArrowRight />
+					</a>
 					<li>
 						<Link href='/#nosotros'>
 							<span onClick={closeMenu}>Nosotros</span>
