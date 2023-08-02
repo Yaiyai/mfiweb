@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { FaFacebook, FaLaptop, FaLinkedin } from 'react-icons/fa';
 
 const HeaderHome = ({ data, secondBlock }) => {
@@ -10,9 +10,6 @@ const HeaderHome = ({ data, secondBlock }) => {
 			<p className='feat-title'>{feat}</p>
 		</article>
 	));
-	useEffect(() => {
-		console.log(data);
-	}, []);
 
 	return (
 		<header>
