@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react';
 
 const ThirdBlock = ({ data }) => {
 	const [services, setServices] = useState([]);
+	const [sponsors, setSponsors] = useState([]);
 	useEffect(() => {
-		console.log(data);
+		// console.log(data);
 		let aux = data.text.split('<p>((SERVICE))</p>');
 
 		aux = aux.filter((elm) => elm);
 		setServices(aux);
+		setSponsors(data.gallery.filter((elm) => elm));
 	}, []);
 
 	return (
@@ -25,6 +27,20 @@ const ThirdBlock = ({ data }) => {
 							<div className='service-content' dangerouslySetInnerHTML={{ __html: elm }}></div>
 						</div>
 					))}
+				</div>
+			)}
+			{sponsors.length > 0 && (
+				<div className='sponsors'>
+					<div className='mfi-container'>
+						<h2>Partners</h2>
+						<div className='sponsor-grid'>
+							{sponsors.map((elm) => (
+								<figure>
+									<img src={elm} alt='Patrocinadores MFi' />
+								</figure>
+							))}
+						</div>
+					</div>
 				</div>
 			)}
 		</div>

@@ -12,6 +12,42 @@
 			width: 100%;
 		}
 	}
+	.sponsors {
+		padding: 72px 0;
+		.sponsor-grid {
+			display: flex;
+			flex-wrap: wrap;
+			padding: 48px 0;
+			@media (max-width: 767px) {
+				gap: 24px;
+			}
+			figure {
+				height: 90px;
+				overflow: hidden;
+				position: relative;
+				@media (min-width: 992px) {
+					@include grid.items-grid(5, 12px);
+				}
+				@media (min-width: 768px) and (max-width: 991px) {
+					@include grid.items-grid(3, 24px);
+				}
+				@media (max-width: 767px) {
+					width: 100%;
+					max-width: 100%;
+					min-width: 100%;
+				}
+
+				img {
+					position: absolute;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					object-fit: contain;
+					object-position: center;
+				}
+			}
+		}
+	}
 	.services-grid {
 		display: flex;
 		flex-wrap: wrap;
