@@ -21,7 +21,7 @@ export default function KitDigital({ kitDigital }) {
 
 				<title>MFi</title>
 			</Head>
-			<main className='mfi-container kit-digital'>
+			<main className='mfi-container legal'>
 				<h1>{kitDigital?.title}</h1>
 				<figure>
 					<img src={kitDigital?.uniqueImage} alt='MFi Kit Digital' />

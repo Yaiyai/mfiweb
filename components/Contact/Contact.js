@@ -39,8 +39,8 @@ const Contact = ({ data, company }) => {
 				<div className='fix'>
 					<div className='left'>
 						<form ref={form}>
-							<input type='hidden' name='receptor' value='ydelrio@bratic.es' />
-							{/* <input type='hidden' name='receptor' value='correo@mfi.es' /> */}
+							<input type='hidden' name='receptor' value='correo@mfi.es' />
+							{/* <input type='hidden' name='receptor' value='ydelrio@bratic.es' /> */}
 							<input type='hidden' name='link' value='https://cms.mfi.es/mfi/mensajes' />
 							<input type='hidden' name='web' value='MFi' />
 							<input type='hidden' name='subject' value='Hay un mensaje nuevo en el gestor de contenido de Mfi.' />
@@ -67,7 +67,7 @@ const Contact = ({ data, company }) => {
 									<input type='checkbox' name='checkbox' id='check' required />
 									<label htmlFor='check'>
 										He leído y acepto la{' '}
-										<Link legacyBehavior href={'/aviso-legal'}>
+										<Link legacyBehavior href={'/politica'}>
 											<a>política de privacidad</a>
 										</Link>
 									</label>

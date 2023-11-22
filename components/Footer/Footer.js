@@ -31,12 +31,14 @@ const Footer = ({ company }) => {
 								<li>
 									<Link href='/kit-digital'>Kit Digital</Link>
 								</li>
-								<li>
-									<Link href='/subvenciones'>Subvenciones</Link>
-								</li>
 							</ul>
 						</div>
 						<div className='right'>
+							<ul className='footer-links'>
+								<li>
+									<Link href='/politica'>Política de privacidad</Link>
+								</li>
+							</ul>
 							<a href={company?.companyFetched?.linkedin} className='rrss-icon' target='new'>
 								<FaLinkedin />
 							</a>
@@ -49,15 +51,15 @@ const Footer = ({ company }) => {
 			</article>
 			<article className='bottom'>
 				<div className='mfi-container'>
-					{/* <ul>
+					<ul>
 						<li>
-							<Link href='/politica-privacidad'>Política de Privacidad</Link>
+							<Link href='/politica'>Política de Privacidad</Link>
 						</li>
 						<span>·</span>
 						<li>
 							<Link href='/aviso-legal'>Aviso Legal</Link>
 						</li>
-					</ul> */}
+					</ul>
 					<small>&copy; {company?.companyFetched?.name}</small>
 				</div>
 			</article>
