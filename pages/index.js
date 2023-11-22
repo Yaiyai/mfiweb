@@ -4,13 +4,14 @@ import { getSection } from '../api/sections';
 import HeaderHome from '../components/home/HeaderHome/HeaderHome';
 import SecondBlock from '../components/home/SecondBlock/SecondBlock';
 import ThirdBlock from '@/components/home/ThirdBlock/ThirdBlock';
+import Contact from '@/components/Contact/Contact';
 
 // import Image from 'next/image'
 // import { Inter } from 'next/font/google'
 
 // const inter = Inter({ subsets: ['latin'] })
 
-export default function Home({ headerHome, secondBlock, thirdBlock, servicesBlock }) {
+export default function Home({ headerHome, secondBlock, thirdBlock, servicesBlock, contacta, companyFetched }) {
 	return (
 		<>
 			<Head>
@@ -38,17 +39,20 @@ export default function Home({ headerHome, secondBlock, thirdBlock, servicesBloc
 
 				<a id='servicios'></a>
 				<ThirdBlock data={servicesBlock} />
+				<a id='contacto'></a>
+				<Contact data={contacta} company={companyFetched} />
 			</main>
 		</>
 	);
 }
 export const getStaticProps = async () => {
-	const [companyFetched, headerHome, secondBlock, thirdBlock, servicesBlock] = await Promise.all([
+	const [companyFetched, headerHome, secondBlock, thirdBlock, servicesBlock, contacta] = await Promise.all([
 		getCompany(),
 		getSection('63fb3c9740485000141a4850'),
 		getSection('63fb3cf140485000141a4855'),
 		getSection('63fb3e7640485000141a485d'),
 		getSection('63fb403e40485000141a4861'),
+		getSection('655e420598ab6c0014b2a0cf'),
 	]);
-	return { props: { companyFetched, headerHome, secondBlock, thirdBlock, servicesBlock } };
+	return { props: { companyFetched, headerHome, secondBlock, thirdBlock, servicesBlock, contacta } };
 };

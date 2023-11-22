@@ -24,10 +24,6 @@ const Desktop = ({ company }) => {
 						{' '}
 						Servicios&Partners
 					</a>
-					{/* <Link href='/#servicios' className={active === 'servicios' ? 'active' : null} onClick={() => setActive('servicios')}>
-						{' '}
-						Servicios&Partners
-					</Link> */}
 				</li>
 			</ul>
 			<ul className='important'>
