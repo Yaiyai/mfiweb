@@ -24,7 +24,7 @@ const MfiLayout = (props) => {
 			<div className='false-nav'></div>
 			<main>{children}</main>
 			<Footer company={companyFetched} />
-			<CookieConsent
+			{/* <CookieConsent
 				enableDeclineButton
 				declineButtonText='Rechazar'
 				location='bottom'
@@ -40,7 +40,7 @@ const MfiLayout = (props) => {
 					mostrarte publicidad en base a tu perfil de navegación (p.e páginas visitadas). Si pulsas ACEPTAR, aceptas todas las cookies. Si pulsas RECHAZAR, rechazas todas las cookies. Si no pulsas
 					ninguna opción no se utilizará ninguna cookie y volveremos a preguntarte cuando accedas de nuevo a la web.
 				</div>
-			</CookieConsent>
+			</CookieConsent> */}
 		</>
 	);
 };
