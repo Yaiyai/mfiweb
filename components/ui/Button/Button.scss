@@ -8,19 +8,20 @@
 }
 
 .my-btn {
-	font-family: var(--font-titles);
-	font-size: var(--font-sm);
-	line-height: 16px;
-	background-color: white;
-	border: none;
-	color: var(--primary);
-	padding: 8px;
-	text-decoration: none;
-	position: relative;
-	border-radius: 50px;
-	display: flex;
-	align-items: center;
-	border: 1px solid var(--light-grey);
+	font-family: var(--font-titles) !important;
+	font-size: var(--font-sm) !important;
+	line-height: 16px !important;
+	background-color: white !important;
+	border: none !important;
+	color: var(--primary) !important;
+	padding: 8px !important;
+	text-decoration: none !important;
+	position: relative !important;
+	border-radius: 50px !important;
+	display: flex !important;
+	align-items: center !important;
+	border: 1px solid var(--light-grey) !important;
+	margin: 0 !important;
 
 	&:hover {
 		background-color: var(--primary);
@@ -32,11 +33,11 @@
 	}
 
 	&.secondary {
-		background-color: white;
-		color: var(--primary);
-		border-bottom: 3px solid var(--primary);
-		padding-left: 0;
-		padding-right: 0;
+		background-color: white !important;
+		color: var(--primary) !important;
+		border-bottom: 3px solid var(--primary) !important;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
 		&:hover {
 			color: var(--secondary);
 			border-bottom: 3px solid var(--secondary);
