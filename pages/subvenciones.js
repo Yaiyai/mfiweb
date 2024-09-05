@@ -5,10 +5,6 @@ import { getSection } from '../api/sections';
 import { useEffect } from 'react';
 
 export default function Subvenciones({ subvenciones }) {
-	useEffect(() => {
-		console.log(subvenciones);
-	}, []);
-
 	return (
 		<>
 			<Head>

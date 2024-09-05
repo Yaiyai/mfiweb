@@ -61,7 +61,7 @@ const Contact = ({ data, company }) => {
 								<textarea name='message' placeholder='Mensaje' onChange={handleInputChange} value={values?.message} />
 							</div>
 
-							<div class='small' dangerouslySetInnerHTML={{ __html: data?.text }}></div>
+							<div className='small' dangerouslySetInnerHTML={{ __html: data?.text }}></div>
 							<div className='submit-group'>
 								<div className='checkbox'>
 									<input type='checkbox' name='checkbox' id='check' required />
