@@ -9,11 +9,11 @@
 	min-width: calc((100% / #{$number}) - (#{$margin} * (#{$number} - 1) / #{$number}));
 	flex-grow: 1;
 
-	&:not(:nth-child(#{$number}n)) {
-		margin-right: $margin;
-	}
-
 	margin-bottom: $margin;
 	margin-right: 0;
 	box-sizing: border-box;
+
+	&:not(:nth-child(#{$number}n)) {
+		margin-right: $margin;
+	}
 }

@@ -1,16 +1,6 @@
-import React, { useEffect, useState } from 'react';
-
 const ThirdBlock = ({ data }) => {
-	const [services, setServices] = useState([]);
-	const [sponsors, setSponsors] = useState([]);
-	useEffect(() => {
-		// console.log(data);
-		let aux = data.text.split('<p>((SERVICE))</p>');
-
-		aux = aux.filter((elm) => elm);
-		setServices(aux);
-		setSponsors(data.gallery.filter((elm) => elm));
-	}, []);
+	const services = (data?.text ?? '').split('<p>((SERVICE))</p>').filter(Boolean);
+	const sponsors = (data?.gallery ?? []).filter(Boolean);
 
 	return (
 		<div className='services'>
@@ -22,7 +12,7 @@ const ThirdBlock = ({ data }) => {
 					{services.map((elm) => (
 						<div className='each-service' key={elm}>
 							<figure>
-								<img src='https://res.cloudinary.com/mfi-app/image/upload/v1682157007/web/services.png' alt='MFi Tienda' />
+								<img src='https://res.cloudinary.com/mfi-app/image/upload/v1682157007/web/services.png' alt='' loading='lazy' />
 							</figure>
 							<div className='service-content' dangerouslySetInnerHTML={{ __html: elm }}></div>
 						</div>
@@ -35,8 +25,8 @@ const ThirdBlock = ({ data }) => {
 						<h2>Partners</h2>
 						<div className='sponsor-grid'>
 							{sponsors.map((elm) => (
-								<figure>
-									<img src={elm} alt='Patrocinadores MFi' />
+								<figure key={elm}>
+									<img src={elm} alt='Logotipo de partner de MFi' loading='lazy' />
 								</figure>
 							))}
 						</div>

@@ -1,15 +1,8 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { FaEnvelope, FaLinkedin } from 'react-icons/fa';
 
 const Footer = ({ company }) => {
-	const isMounted = useRef(true);
-	useEffect(() => {
-		return () => {
-			isMounted.current = false;
-		};
-	}, []);
-
 	return (
 		<footer>
 			<article className='top'>
@@ -18,7 +11,7 @@ const Footer = ({ company }) => {
 						<div className='left'>
 							<Link href='/'>
 								<figure className='logo'>
-									<img src={company?.companyFetched?.mainLogo} alt='mfi Logo' />
+									<img src={company?.mainLogo} alt='mfi Logo' />
 								</figure>
 							</Link>
 							<ul className='footer-links'>
@@ -42,10 +35,10 @@ const Footer = ({ company }) => {
 									<Link href='/politica'>Política de privacidad</Link>
 								</li>
 							</ul>
-							<a href={company?.companyFetched?.linkedin} className='rrss-icon' target='new'>
+							<a href={company?.linkedin} className='rrss-icon' target='_blank' rel='noopener noreferrer'>
 								<FaLinkedin />
 							</a>
-							<a href={`mailto:${company?.companyFetched?.mainEmail}`} className='rrss-icon' target='new'>
+							<a href={`mailto:${company?.mainEmail}`} className='rrss-icon' target='_blank' rel='noopener noreferrer'>
 								<FaEnvelope />
 							</a>
 						</div>
@@ -63,7 +56,7 @@ const Footer = ({ company }) => {
 							<Link href='/aviso-legal'>Aviso Legal</Link>
 						</li>
 					</ul>
-					<small>&copy; {company?.companyFetched?.name}</small>
+					<small>&copy; {company?.name}</small>
 				</div>
 			</article>
 		</footer>

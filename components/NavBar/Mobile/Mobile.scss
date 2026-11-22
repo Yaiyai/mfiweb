@@ -4,6 +4,17 @@
 	display: flex;
 	align-items: center;
 	margin-left: auto;
+	@media (min-width: 992px) {
+		display: none;
+	}
+	.menu-toggle {
+		background: none;
+		border: 0;
+		padding: 0;
+		cursor: pointer;
+		color: inherit;
+		line-height: 0;
+	}
 	.menu-btn {
 		width: 30px;
 		height: 30px;

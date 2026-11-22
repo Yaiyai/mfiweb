@@ -2,7 +2,6 @@ import Link from 'next/link';
 import React, { useRef, useState } from 'react';
 import { FaArrowRight, FaLinkedin } from 'react-icons/fa';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
-import { GrClose } from 'react-icons/gr';
 
 const Mobile = ({ company, menuHeight }) => {
 	const [showMenu, setShowMenu] = useState(false);
@@ -25,7 +24,9 @@ const Mobile = ({ company, menuHeight }) => {
 				{' '}
 				Contacto{' '}
 			</Link> */}
-			{!showMenu ? <HiMenuAlt3 className='menu-btn' onClick={() => manageNav()} /> : <HiX className='menu-btn' onClick={() => manageNav()} />}
+			<button type='button' className='menu-toggle' aria-label={showMenu ? 'Cerrar menú' : 'Abrir menú'} aria-expanded={showMenu} onClick={manageNav}>
+				{showMenu ? <HiX className='menu-btn' /> : <HiMenuAlt3 className='menu-btn' />}
+			</button>
 			<div ref={subMenu} className={showMenu ? `sub-menu show` : 'sub-menu'}>
 				<ul>
 					<a className='my-btn' href='https://www.nanosystems.it/public/download/Supremo.exe'>
@@ -43,7 +44,7 @@ const Mobile = ({ company, menuHeight }) => {
 						</Link>
 					</li>
 					<li>
-						<a href={company?.companyFetched?.linkedin} className='rrss-icon' target='new'>
+						<a href={company?.linkedin} className='rrss-icon' target='_blank' rel='noopener noreferrer'>
 							<FaLinkedin />
 						</a>
 					</li>

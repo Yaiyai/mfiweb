@@ -4,11 +4,10 @@ import NavBar from '../components/NavBar/NavBar';
 import Footer from '../components/Footer/Footer';
 import { CompanyContext } from '../context/CompanyContext';
 import { useContext } from 'react';
-import CookieConsent from 'react-cookie-consent';
 
 const MfiLayout = (props) => {
 	const { children } = props;
-	const companyFetched = useContext(CompanyContext);
+	const company = useContext(CompanyContext);
 	return (
 		<>
 			<Head>
@@ -20,10 +19,10 @@ const MfiLayout = (props) => {
 
 				<meta name='keywords' content='' />
 			</Head>
-			<NavBar company={companyFetched} />
+			<NavBar company={company} />
 			<div className='false-nav'></div>
 			<main>{children}</main>
-			<Footer company={companyFetched} />
+			<Footer company={company} />
 			{/* <CookieConsent
 				enableDeclineButton
 				declineButtonText='Rechazar'

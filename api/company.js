@@ -1,11 +1,13 @@
 const apiURL = process.env.NEXT_PUBLIC_BASEURL;
 
 export const getCompany = async () => {
-    try {
-        let resp = await fetch(`${apiURL}/companies`);
-        let body = await resp.json();
-        return body.company[0];
-    } catch (error) {
-        console.error('Error getting company:', error);
-    }
+	try {
+		const resp = await fetch(`${apiURL}/companies`);
+		if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+		const body = await resp.json();
+		return body.company?.[0] ?? null;
+	} catch (error) {
+		console.error('Error getting company:', error);
+		return null;
+	}
 };

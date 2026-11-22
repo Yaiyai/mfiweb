@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
-import { FaFacebook, FaLaptop, FaLinkedin } from 'react-icons/fa';
+import React from 'react';
+import { FaLaptop } from 'react-icons/fa';
 
 const HeaderHome = ({ data, secondBlock }) => {
-	const [features, setFeatures] = useState([secondBlock?.features]);
 	const style = { '--feats': secondBlock?.features?.length };
-	const list = secondBlock?.features.map((feat) => (
+	const list = secondBlock?.features?.map((feat) => (
 		<article className='each-feat' key={'feature-' + feat} style={style}>
 			<FaLaptop />
 			<p className='feat-title'>{feat}</p>
@@ -20,7 +19,7 @@ const HeaderHome = ({ data, secondBlock }) => {
 			<a id='nosotros'></a>
 			<div className='first-block'>
 				<figure>
-					<img src={data?.uniqueImage} alt='MFi' />
+					<img src={data?.uniqueImage} alt='MFi' fetchPriority='high' />
 				</figure>
 				<div className='text-block'>
 					<div className='first-text'>

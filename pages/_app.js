@@ -12,27 +12,26 @@ export default function App({ Component, pageProps }) {
 	const companyFetched = pageProps.companyFetched;
 	const router = useRouter();
 	const [loading, setLoading] = useState(false);
-	const handleComplete = () => {
-		setLoading(false);
-	};
-	const handleStart = () => {
-		setLoading(true);
-	};
 
 	useEffect(() => {
-		const bodyContainer = document.querySelector('body');
+		const handleStart = () => setLoading(true);
+		const handleComplete = () => setLoading(false);
 		router.events.on('routeChangeStart', handleStart);
 		router.events.on('routeChangeComplete', handleComplete);
 		router.events.on('routeChangeError', handleComplete);
-		if (loading) {
-			bodyContainer?.classList.add('no-scroll');
-		} else {
-			bodyContainer?.classList.remove('no-scroll');
-		}
-	}, [router, loading]);
+		return () => {
+			router.events.off('routeChangeStart', handleStart);
+			router.events.off('routeChangeComplete', handleComplete);
+			router.events.off('routeChangeError', handleComplete);
+		};
+	}, [router]);
+
+	useEffect(() => {
+		document.body.classList.toggle('no-scroll', loading);
+	}, [loading]);
 
 	return (
-		<CompanyContext.Provider value={{ companyFetched }}>
+		<CompanyContext.Provider value={companyFetched ?? null}>
 			<MfiLayout>
 				<Loader loading={loading} />
 				<Component {...pageProps} />

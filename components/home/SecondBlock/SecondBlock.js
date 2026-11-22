@@ -6,7 +6,7 @@ const SecondBlock = ({ data }) => {
 		<section className='tienda'>
 			<div className='left'>
 				<figure>
-					<img src={data?.uniqueImage} alt='MFi Tienda' />
+					<img src={data?.uniqueImage} alt='Tienda de MFi' loading='lazy' />
 				</figure>
 				<div className='quote'>
 					<p>«Si su negocio no está en internet, su negocio no existe»</p>

@@ -7,30 +7,26 @@ import Mobile from './Mobile/Mobile';
 
 const NavBar = ({ company }) => {
 	const [theHeight, setHeight] = useState(0);
-	const isMounted = useRef(true);
 	const theNav = useRef(null);
 
 	const size = useWindowResize();
 
 	useEffect(() => {
-		if (theNav) {
-			setHeight(theNav.current.clientHeight);
-		}
-		return () => {
-			isMounted.current = false;
-		};
-	}, [theNav, theHeight, size]);
+		if (theNav.current) setHeight(theNav.current.clientHeight);
+	}, [size]);
 
+	// Both menus are rendered; CSS (see Desktop.scss / Mobile.scss) shows the right one,
+	// so SSR output matches the client and there is no flash on load.
 	return (
 		<nav ref={theNav} className='main-nav'>
 			<div className='mfi-container'>
 				<Link href='/#inicio'>
 					<figure className='logo'>
-						<img src={company?.companyFetched?.mainLogo} alt='mfi Logo' />
+						<img src={company?.mainLogo} alt='MFi logo' />
 					</figure>
 				</Link>
-				{size[0] <= 991 && <Mobile company={company} menuHeight={theHeight} />}
-				{size[0] > 992 && <Desktop company={company} />}
+				<Mobile company={company} menuHeight={theHeight} />
+				<Desktop company={company} />
 			</div>
 		</nav>
 	);

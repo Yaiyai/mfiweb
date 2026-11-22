@@ -1,6 +1,9 @@
 .desktop-nav {
-	display: flex;
+	display: none;
 	width: 100%;
+	@media (min-width: 992px) {
+		display: flex;
+	}
 	a {
 		font-family: var(--font-titles);
 		color: var(--primary);

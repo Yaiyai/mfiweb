@@ -1,9 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import useForm from '../../hook/useForm';
 import { sendMessage } from '../../api/messages';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 
 import Swal from 'sweetalert2';
 
@@ -11,25 +11,40 @@ const Contact = ({ data, company }) => {
 	const { values, handleInputChange, resetForm } = useForm({ name: '', lastName: '', phone: '', email: '', subject: '', message: '' });
 	const form = useRef();
 
-	useEffect(() => {
-		console.log(data);
-	}, []);
-	const sendEmail = (e) => {
+	const [sending, setSending] = useState(false);
+
+	const sendEmail = async (e) => {
 		e.preventDefault();
-		emailjs
-			.sendForm('bratic_contact', 'template_messages', form.current, 'user_ktgYq5LuGt8HgLfoJW8MI')
-			.then((result) => {
-				sendMessage(values);
-				resetForm();
-				Object.keys(values).forEach((v) => (values[v] = ''));
-			})
-			.catch((error) => {
-				Swal.fire({
-					title: '¡Oh-Oh',
-					html: 'Ha habido un error en el envío de la consulta, inténtalo de nuevo :)',
-					confirmButtonText: 'Cerrar',
-				});
+		const formElement = e.currentTarget;
+		setSending(true);
+		try {
+			// The CMS is the source of truth: if this fails the user is told to retry.
+			await sendMessage(values);
+		} catch (error) {
+			console.error('Error saving message:', error);
+			setSending(false);
+			Swal.fire({
+				title: '¡Oh-Oh',
+				html: 'Ha habido un error en el envío de la consulta, inténtalo de nuevo :)',
+				confirmButtonText: 'Cerrar',
 			});
+			return;
+		}
+		// The email is only a notification: don't make the user resend if it fails.
+		try {
+			await emailjs.sendForm(
+				process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+				process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+				form.current,
+				process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+			);
+		} catch (error) {
+			console.error('Error sending notification email:', error);
+		}
+		formElement.reset();
+		resetForm();
+		setSending(false);
+		Swal.fire({ title: '¡Gracias!', html: 'Tu consulta ha sido enviada', confirmButtonText: 'Cerrar' });
 	};
 
 	return (
@@ -51,7 +66,7 @@ const Contact = ({ data, company }) => {
 								<input type='text' name='lastName' placeholder='Apellidos' onChange={handleInputChange} value={values?.lastName} />
 							</div>
 							<div className='input-group double'>
-								<input type='phone' name='phone' placeholder='Teléfono de contacto*' onChange={handleInputChange} required value={values?.phone} />
+								<input type='tel' name='phone' placeholder='Teléfono de contacto*' onChange={handleInputChange} required value={values?.phone} />
 								<input type='email' name='email' placeholder='Correo electrónico*' onChange={handleInputChange} required value={values?.email} />
 							</div>
 							<div className='input-group'>
@@ -67,29 +82,27 @@ const Contact = ({ data, company }) => {
 									<input type='checkbox' name='checkbox' id='check' required />
 									<label htmlFor='check'>
 										He leído y acepto la{' '}
-										<Link legacyBehavior href={'/politica'}>
-											<a>política de privacidad</a>
-										</Link>
+										<Link href='/politica'>política de privacidad</Link>
 									</label>
 								</div>
-								<button className='my-btn primary' type='submit'>
-									Enviar{' '}
+								<button className='my-btn primary' type='submit' disabled={sending}>
+									{sending ? 'Enviando…' : 'Enviar'}
 								</button>
 							</div>
 						</form>
 					</div>
 					<div className='right'>
 						<div className='image-fix'>
-							<Image src={data?.uniqueImage} className='image' fill alt='Localizacion de MFi' />
+							<Image src={data?.uniqueImage} className='image' fill sizes='(max-width: 767px) 100vw, 50vw' alt='Localización de MFi' />
 						</div>
 						<div className='companies'>
 							<div className='company-info'>
 								<p>
 									<strong>Tienda & Atención al cliente</strong>
 								</p>
-								<p>Email: {company.mainEmail}</p>
-								<p>Teléfono: {company.phone}</p>
-								<p>Dirección: {company.address}</p>
+								<p>Email: {company?.mainEmail}</p>
+								<p>Teléfono: {company?.phone}</p>
+								<p>Dirección: {company?.address}</p>
 							</div>
 						</div>
 					</div>

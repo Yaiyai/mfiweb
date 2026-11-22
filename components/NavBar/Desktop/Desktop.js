@@ -20,10 +20,9 @@ const Desktop = ({ company }) => {
 					</Link>
 				</li>
 				<li>
-					<a href='/#servicios' className={active === 'servicios' ? 'active' : null} onClick={() => setActive('servicios')}>
-						{' '}
+					<Link href='/#servicios' className={active === 'servicios' ? 'active' : null} onClick={() => setActive('servicios')}>
 						Servicios&Partners
-					</a>
+					</Link>
 				</li>
 			</ul>
 			<ul className='important'>
@@ -33,10 +32,10 @@ const Desktop = ({ company }) => {
 						Contacto{' '}
 					</Link>
 				</li>
-				<a href={company?.companyFetched?.linkedin} className='rrss-icon' target='new'>
+				<a href={company?.linkedin} className='rrss-icon' target='_blank' rel='noopener noreferrer'>
 					<FaLinkedin />
 				</a>
-				{/* <a href={company?.companyFetched?.facebook} className='rrss-icon' target='new'>
+				{/* <a href={company?.facebook} className='rrss-icon' target='_blank' rel='noopener noreferrer'>
 					<FaFacebook />
 				</a> */}
 				<div className='line'></div>
