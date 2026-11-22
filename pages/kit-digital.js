@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import { getCompany } from '../api/company';
 import { getSection } from '../api/sections';
 
@@ -27,6 +28,16 @@ export default function KitDigital({ kitDigital }) {
 					<img src={kitDigital?.uniqueImage} alt='MFi Kit Digital' fetchPriority='high' />
 				</figure>
 				<div className='post-text' dangerouslySetInnerHTML={kitDigital?.parsedText}></div>
+				<figure className='kit-funding'>
+					<Image
+						src='/img/kit-digital-financiacion.jpg'
+						alt='Kit Digital, financiado por la Unión Europea NextGenerationEU, Gobierno de España, Red.es y Plan de Recuperación, Transformación y Resiliencia'
+						width={886}
+						height={89}
+						sizes='(max-width: 1200px) 100vw, 1200px'
+						style={{ width: '100%', height: 'auto' }}
+					/>
+				</figure>
 			</div>
 		</>
 	);
